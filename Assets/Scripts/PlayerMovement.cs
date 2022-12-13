@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        HorizontalMovement();    
+        HorizontalMovement();
     }
 
     void OnHorizontalMove(InputValue value)
@@ -41,7 +41,9 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnJump()
     {
-        Debug.Log("Jump pressed");
+       rigidBod.AddForce(Vector2.up * 500, ForceMode2D.Force);
+            // OverlapBox
+            //if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer)) //checks if set box overlaps with ground
+        }
     }
-}
 }
