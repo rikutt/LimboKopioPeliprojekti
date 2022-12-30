@@ -3,6 +3,10 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// References 
+// https://github.com/Matthew-J-Spencer/Ultimate-2D-Controller/blob/main/Scripts/PlayerController.cs
+// https://github.com/Dawnosaur/platformer-movement/blob/main/Scripts/PlayerMovement.cs
+
 namespace Barebones2D
 {
     public class PlayerMovement : MonoBehaviour
@@ -10,32 +14,29 @@ namespace Barebones2D
 
         public PlayerManager PlayerInstance;
 
-        [SerializeField] private float maxSpeed;
-        [SerializeField] private float _accelerationAmount;
-        [SerializeField] private float _decelerationAmount;
-        [SerializeField] private float maxFallSpeed;
-        [SerializeField] private float maxFallWhileTouchingWalls;
+        [SerializeField] private float maxSpeed, _accelerationAmount, 
+                                       _decelerationAmount, maxFallSpeed, 
+                                       maxFallWhileTouchingWalls;
+
 
         [SerializeField] private int doubleJumpAmount;
-        [SerializeField] private float jumpForce;
-        [SerializeField] private float wallJumpForce;
-        [SerializeField] private float jumpDelayValue;
-        [SerializeField] private float coyoteTime;
-        [SerializeField] private float gravityJumpScalerTime;
+        
+        [SerializeField] private float jumpForce, wallJumpForce, 
+                                       jumpDelayValue, coyoteTime, 
+                                       gravityJumpScalerTime;
 
-        [SerializeField] private float dashTime;
-        [SerializeField] private float dashCooldownTime;
-        [SerializeField] private float dashSpeed;
-        [SerializeField] private float dashEndingSpeed;
+
+        [SerializeField] private float dashTime, dashCooldownTime, 
+                                       dashSpeed, dashEndingSpeed;
 
         private Vector2 _dashVelocity;
         private Vector2 _dashEndingVelocity;
         private int _doubleJumpCounter;
-        private float _dashDurationTimer;
-        private float _timerFromLastDash;
-        private float _coyoteTimerCheck;
-        private float _timerFromLastJump;
-        private float _gravityScalerTimer;
+
+        private float _dashDurationTimer, _timerFromLastDash, 
+                      _coyoteTimerCheck, _timerFromLastJump, 
+                      _gravityScalerTimer;
+
         private bool hasLetGoOfJump;
         private Vector2 wallJumpDirectionToRight = new Vector2(1f,0.5f);
         private Vector2 wallJumpDirectionToLeft = new Vector2(-1f, 0.5f);
@@ -132,6 +133,7 @@ namespace Barebones2D
         void OnDashAction(InputValue value)
         {
             // TODO needs to know which side player is facing TODO
+            // fixes wacky dodge when pressing dodge button before direction...
             if (PlayerInstance.MovementDirectionVector2 == Vector2.zero) return;
 
             if (_timerFromLastDash < 0 && !PlayerInstance.IsDashing)
@@ -145,6 +147,7 @@ namespace Barebones2D
                 PlayerInstance.IsDashing = true;
             }
         }
+
         private void Dashing()
         {
             if (!PlayerInstance.IsDashing) return;
