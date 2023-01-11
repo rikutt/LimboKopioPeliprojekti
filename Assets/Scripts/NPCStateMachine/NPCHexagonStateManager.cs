@@ -18,6 +18,7 @@ namespace Barebones2D.NPC
         // Useful stuff for states to use
         public Rigidbody2D Rigidbody2D;
         public Transform TargetTransform;
+        public SpriteRenderer InstanceSpriteRenderer;
         public Light2D HexagonLight;
         public Transform[] PatrolTransforms; 
         public float TargetMoveSpeed, AccelerationRate, PatrolMoveSpeed, PatrolAccelerationRate;
@@ -27,6 +28,7 @@ namespace Barebones2D.NPC
         {
             Rigidbody2D = GetComponent<Rigidbody2D>();
             HexagonLight = GetComponent<Light2D>();
+            InstanceSpriteRenderer = GetComponent<SpriteRenderer>();
             currentState = IdleState;
 
             currentState.EnterState(this);

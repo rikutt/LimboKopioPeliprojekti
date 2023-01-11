@@ -8,7 +8,7 @@ namespace Barebones2D.NPC
         public void EnterState(NPCHexagonStateManager NPC)
         {
             NPC.HexagonLight.color = new Color(1, 0.2f, 0.2f, 1);
-            Debug.Log("Enter state for NPCFollowState");
+            NPC.InstanceSpriteRenderer.color = new Color(1, 0.2f, 0.2f, 1);
         }
         public void UpdateState(NPCHexagonStateManager NPC)
         {
@@ -31,7 +31,7 @@ namespace Barebones2D.NPC
         }
         public void ExitState(NPCHexagonStateManager NPC)
         {
-            Debug.Log("Exit state for NPCFollowState");
+            
         }
     }
 }

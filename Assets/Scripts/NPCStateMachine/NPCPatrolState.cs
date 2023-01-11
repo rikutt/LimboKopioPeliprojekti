@@ -11,7 +11,7 @@ namespace Barebones2D.NPC
             patrolIndexLength = NPC.PatrolTransforms.Length;
             patrolIndex = 0;
             NPC.HexagonLight.color = new Color(0.7f, 0.78f, 0.97f, 1);
-            Debug.Log("Enter state for NPCPatrolState");
+            NPC.InstanceSpriteRenderer.color = new Color(0.7f, 0.78f, 0.97f, 1);
         }
         public void UpdateState(NPCHexagonStateManager NPC)
         {
@@ -32,7 +32,7 @@ namespace Barebones2D.NPC
         }
         public void ExitState(NPCHexagonStateManager NPC)
         {
-            Debug.Log("Exit state for NPCPatrolState");
+            
         }
         void MoveAtPatrolTarget(Transform patrolTarget, NPCHexagonStateManager NPC)
         {

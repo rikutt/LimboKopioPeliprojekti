@@ -11,7 +11,8 @@ namespace Barebones2D.NPC
         {
             
             NPC.HexagonLight.color = new Color(0.3f, 0.6f, 0.95f, 1);
-            Debug.Log("Enter state for NPCIdleState");
+            NPC.InstanceSpriteRenderer.color = new Color(0.3f, 0.6f, 0.95f, 1);
+            
         }
         public void UpdateState(NPCHexagonStateManager NPC)
         {
@@ -36,7 +37,7 @@ namespace Barebones2D.NPC
         {
             IdleTime = 0.0f;
             HasJumped = false;
-            Debug.Log("Exit state for NPCIdleState");
+            
         }
     }
 }

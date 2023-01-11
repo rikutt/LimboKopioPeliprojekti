@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2656726684959582135}
   - component: {fileID: 2656726684959582134}
   - component: {fileID: 2656726684959582123}
-  - component: {fileID: 2656726684959582120}
+  - component: {fileID: 3328778350159304804}
   - component: {fileID: 2656726684959582125}
   - component: {fileID: 2656726684959582124}
   - component: {fileID: 2656726684959582122}
@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,11 +75,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1593321001
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 0.07903027, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,8 +110,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &2656726684959582120
-PolygonCollider2D:
+--- !u!70 &3328778350159304804
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,28 +119,13 @@ PolygonCollider2D:
   m_GameObject: {fileID: 2656726684959582132}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a9eb4df9c449f65498e2bac014f4aec2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
-    newSize: {x: 1, y: 0.8828125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
+  m_Offset: {x: -0.06, y: 0.34}
+  m_Size: {x: 0.87, y: 0.71}
+  m_Direction: 1
 --- !u!61 &2656726684959582125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,9 +141,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.44400004, y: 1.0040001, z: 0.23200001, w: 0.16000001}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 2.048, y: 2.048}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -187,7 +172,7 @@ MonoBehaviour:
   m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 1d7b9a452926f85e
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -260,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody2D: {fileID: 0}
   TargetTransform: {fileID: 0}
+  InstanceSpriteRenderer: {fileID: 0}
   HexagonLight: {fileID: 0}
   PatrolTransforms:
   - {fileID: 0}

@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackgroundFar
+    uniqueID: 953810701
+    locked: 0
+  - name: BackgroundClose
+    uniqueID: 672354945
+    locked: 0
+  - name: CloseDepth
+    uniqueID: 1167751965
+    locked: 0
+  - name: PlayerDepth
+    uniqueID: 1593321001
+    locked: 0
+  - name: Foreground
+    uniqueID: 2247907151
+    locked: 0
