@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4169205372248175100
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4029561271454060880, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_Name
+      value: PlatformPolygonCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060882, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1614569910, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+    - target: {fileID: 4029561271454060882, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060882, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060882, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4029561271454060845, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+--- !u!1 &1022350728383979692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4029561271454060880, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+  m_PrefabInstance: {fileID: 4169205372248175100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &1987342241988525440
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022350728383979692}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.97, y: 1.54}
+    newSize: {x: 4.98, y: 1.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.4059794, y: 0.2339915}
+      - {x: -1.9961448, y: -0.0390085}
+      - {x: -1.2577835, y: 0.1668219}
+      - {x: -0.6207398, y: 0.16726126}
+      - {x: 0.17883527, y: -0.13957012}
+      - {x: 1.3431206, y: -0.23673528}
+      - {x: 1.9467907, y: -0.40561348}
+      - {x: 1.8765861, y: -0.19691294}
+      - {x: 1.3574812, y: 0.009053059}
+      - {x: 0.19292107, y: 0.11355662}
+      - {x: -0.5354768, y: 0.33776328}
