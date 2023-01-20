@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: testing
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e312c4e13f825b94b8d35d59de554bb5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 90ea0e051c82904428cac6b3b96fab1c, type: 3}
+  - {fileID: 21300000, guid: bf360e776114cdf48b6e1f26f959463f, type: 3}
+  - {fileID: -1666990964, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+  - {fileID: 1205066055, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+  - {fileID: -850951196, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+  - {fileID: 746304560, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+  - {fileID: -1506751932, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+  - {fileID: 1614569910, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
+  - {fileID: -2053319782, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
+  - {fileID: -1137386456, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
+  - {fileID: -1444501905, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
+  - {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
+  - {fileID: 21300000, guid: 99c8cbaf594a6594aaca1bc54a9fe532, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Illustration5_12
+  - Illustration7_4
+  - TempRock2
+  - TempRock3
+  - TempRock
+  - TempStump
+  - TempStump2
+  - TempBranch
+  - Illustration5_2_0
+  - Illustration5_2_1
+  - Illustration5_2_2
+  - Illustration5_4
+  - Illustration7_3
+  m_RenderDataMap: {}
+  m_Tag: testing
+  m_IsVariant: 0

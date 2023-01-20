@@ -13,7 +13,8 @@ namespace Barebones2D
         public Rigidbody2D RigidBod;
         public Collider2D PlayerCollider2D;
         public Vector2 MovementDirectionVector2;
-        public float JumpButtonValue;
+        public float JumpButtonValue, MainAttackButtonValue;
+
         public bool IsDashing;
         public bool IsGrounded;
         public bool IsTouchingLeftWall;
@@ -39,6 +40,8 @@ namespace Barebones2D
         void OnMovementAction(InputValue value) => MovementDirectionVector2 = value.Get<Vector2>();
     
         void OnJumpAction(InputValue value) => JumpButtonValue = value.Get<float>();
+
+        void OnMainAttackAction(InputValue value) => MainAttackButtonValue = value.Get<float>();
 
         void Update()
         {

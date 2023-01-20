@@ -128,6 +128,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
   m_PrefabInstance: {fileID: 285706618}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &186198763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2249484919418676882, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+  m_PrefabInstance: {fileID: 467679922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223476462
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +392,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6468049
+      objectReference: {fileID: 0}
+    - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8259052
+      objectReference: {fileID: 0}
+    - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8962264
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5458793
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7277111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8207547
+      objectReference: {fileID: 0}
     - target: {fileID: 2249484919418676880, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -434,6 +463,18 @@ PrefabInstance:
     - target: {fileID: 2249484919418676882, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249484919428528277, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249484919428528277, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249484919428528277, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
@@ -1015,6 +1056,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2249484919418676880, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
   m_PrefabInstance: {fileID: 467679922}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &895650142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186198763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8234c4b8a6378f4495f17234bfc688f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989405944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,10 +1538,6 @@ PrefabInstance:
       propertyPath: PatrolTransforms.Array.data[1]
       value: 
       objectReference: {fileID: 1625322954}
-    - target: {fileID: 2656726684959582123, guid: 4b210338d2b31f94883a2db5ba492cd7, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2656726684959582132, guid: 4b210338d2b31f94883a2db5ba492cd7, type: 3}
       propertyPath: m_Name
       value: BestagonEnemy
