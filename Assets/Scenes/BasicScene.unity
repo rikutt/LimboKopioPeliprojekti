@@ -244,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformFloor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4029561271454060882, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 88c34891fc3d38b4bb988ecc7e5fd1e8, type: 2}
     - target: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -634,6 +638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1862180940}
     m_Modifications:
+    - target: {fileID: 4029561271454060845, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4029561271454060880, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
       propertyPath: m_Name
       value: PlatformFloor (3)
@@ -1550,6 +1558,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1593321001
       objectReference: {fileID: 0}
+    - target: {fileID: 2656726684959582134, guid: 4b210338d2b31f94883a2db5ba492cd7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a558bcc163061e4c9d8259588e51971, type: 2}
     - target: {fileID: 2656726684959582135, guid: 4b210338d2b31f94883a2db5ba492cd7, type: 3}
       propertyPath: m_RootOrder
       value: 1

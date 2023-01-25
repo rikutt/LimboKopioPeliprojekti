@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Barebones2D.PlayerCombat
@@ -8,7 +6,7 @@ namespace Barebones2D.PlayerCombat
     {
         private PlayerManager playerManagerInstance;
         private PlayerCombatStateMachine playerCombatStateMachine;
-
+        
 
         public void EnterState(PlayerManager _playerManagerInstance, PlayerCombatStateMachine _playerCombatStateMachine)
         {
@@ -17,14 +15,17 @@ namespace Barebones2D.PlayerCombat
         }
         public void UpdateState() 
         {
-            if (playerManagerInstance.MainAttackButtonValue > 0)
+            if (playerManagerInstance.IsDashing)
+                return;
+            // what button and what attack type to send forward
+            if (playerManagerInstance.MainAttackButtonValue > 0 )
             {
-                playerCombatStateMachine.SetNextState(new PlayerWindupAttackState());
+                playerCombatStateMachine.SetNextState(new PlayerWindupAttackState(playerCombatStateMachine.BasicAttack));
             }
         }
         public void FixedUpdateState()
         {
-
+            
         }
         public void ExitState()
         {

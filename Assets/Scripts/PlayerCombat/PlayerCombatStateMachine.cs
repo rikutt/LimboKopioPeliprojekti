@@ -25,12 +25,16 @@ namespace Barebones2D.PlayerCombat
 
         private IPlayerCombatState nextState;
         private PlayerManager playerManagerInstance;
+        // temp
+        public MeleeAttackProperties BasicAttack;
+       
 
         private void Start()
         {
             playerManagerInstance = GetComponent<PlayerManager>();
             nextState = new PlayerIdleCombatState();
-            
+            // temp
+            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1, 1, 1.5f, 1.0f, 1.5f, 2.0f);
         }
 
         private void Update()
