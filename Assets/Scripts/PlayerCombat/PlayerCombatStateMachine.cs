@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* thinking
+/* 
+ * Pyörittää Attackeihin kuuluvia asioita State Machinena
+ * Luo eri attackit ja antaa mahdollisuuden muokata niitä
+ * Default statea lukuunottamatta Statet vaihtuvat Statejen sisältä
+ * 
+ * 
+thinking:
 windup, attack, recovery, interrupted?
 2 inputs 2 attacks. 
 idle state. 
@@ -64,6 +70,7 @@ namespace Barebones2D.PlayerCombat
             CurrentState.EnterState(playerManagerInstance, this);
         }
 
+        // What to call to change States
         public void SetNextState(IPlayerCombatState _nextState)
         {
             if (_nextState != null)

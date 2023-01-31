@@ -24,13 +24,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "DashAction",
-                    "type": "Button",
+                    "name": "DodgeAction",
+                    "type": "Value",
                     "id": "64258f6c-c37a-4f6f-b834-a8e56261788f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MainAttackAction",
@@ -125,7 +125,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DashAction",
+                    "action": "DodgeAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

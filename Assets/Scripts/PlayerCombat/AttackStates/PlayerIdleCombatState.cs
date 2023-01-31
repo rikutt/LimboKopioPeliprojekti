@@ -15,7 +15,7 @@ namespace Barebones2D.PlayerCombat
         }
         public void UpdateState() 
         {
-            if (playerManagerInstance.IsDashing)
+            if (playerManagerInstance.IsDodging)
                 return;
             // what button and what attack type to send forward
             if (playerManagerInstance.MainAttackButtonValue > 0 )

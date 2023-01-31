@@ -25,7 +25,7 @@ namespace Barebones2D.PlayerCombat
         public void UpdateState() 
         {
             stateTimer += Time.deltaTime;
-            if (playerManagerInstance.IsDashing)
+            if (playerManagerInstance.IsDodging)
                 playerCombatStateMachine.SetNextState(new PlayerIdleCombatState());
         }
         public void FixedUpdateState()

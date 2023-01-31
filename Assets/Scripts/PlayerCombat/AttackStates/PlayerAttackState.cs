@@ -1,5 +1,8 @@
 using UnityEngine;
-
+/*
+ * Otetaan vasta t‰‰ll‰ attack suunta, kun sprite facing on implementoitu 
+ * 
+*/
 namespace Barebones2D.PlayerCombat
 {
     public class PlayerAttackState : IPlayerCombatState

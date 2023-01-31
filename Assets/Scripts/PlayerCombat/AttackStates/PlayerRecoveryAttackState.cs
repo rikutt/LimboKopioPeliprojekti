@@ -1,4 +1,11 @@
 using UnityEngine;
+/*
+ * Uuden attackin queue? Otetaanko HasLetGoOfAttackButton PlayerManagerista?
+ * Testataan JustFrame optiota? :D
+ * 
+ * 
+*/
+
 
 namespace Barebones2D.PlayerCombat
 {

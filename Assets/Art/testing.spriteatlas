@@ -38,8 +38,11 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: bd96296476678a148b133196ee6363bc, type: 3}
+  - {fileID: 21300000, guid: 1a55a0746a427454dbfe02c91ac5f402, type: 3}
   - {fileID: 21300000, guid: 90ea0e051c82904428cac6b3b96fab1c, type: 3}
   - {fileID: 21300000, guid: bf360e776114cdf48b6e1f26f959463f, type: 3}
+  - {fileID: 21300000, guid: 9c884d686599d0041ad58804b345b4b2, type: 3}
   - {fileID: -1666990964, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
   - {fileID: 1205066055, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
   - {fileID: -850951196, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
@@ -49,11 +52,18 @@ SpriteAtlas:
   - {fileID: -2053319782, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
   - {fileID: -1137386456, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
   - {fileID: -1444501905, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
+  - {fileID: 21300000, guid: 6c93bd1bbe7339443ac88e13ad247996, type: 3}
+  - {fileID: 21300000, guid: 2990393c5248e8d4f81b873a9a48d891, type: 3}
   - {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
+  - {fileID: -987239758, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
+  - {fileID: -1879303527, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
   - {fileID: 21300000, guid: 99c8cbaf594a6594aaca1bc54a9fe532, type: 3}
   m_PackedSpriteNamesToIndex:
+  - limbo_copy_BC4
+  - limbo_copy_BC3
   - Illustration5_12
   - Illustration7_4
+  - limbo_copy_BC5
   - TempRock2
   - TempRock3
   - TempRock
@@ -63,7 +73,11 @@ SpriteAtlas:
   - Illustration5_2_0
   - Illustration5_2_1
   - Illustration5_2_2
+  - limbo_copy_BC1
+  - limbo_copy_BC2
   - Illustration5_4
+  - player_char_idle
+  - player_char_walking
   - Illustration7_3
   m_RenderDataMap: {}
   m_Tag: testing
