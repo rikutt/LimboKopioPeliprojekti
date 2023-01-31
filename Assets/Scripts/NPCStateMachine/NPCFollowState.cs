@@ -16,6 +16,9 @@ namespace Barebones2D.NPC
         }
         public void FixedUpdateState(NPCHexagonStateManager NPC)
         {
+            if (NPC.TargetTransform == null) 
+                return;
+
             // move at target
             float finalSpeed;
             float direction = NPC.TargetTransform.position.x - NPC.Rigidbody2D.position.x;

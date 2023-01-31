@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -29,14 +26,17 @@ namespace Barebones2D.NPC
             Rigidbody2D = GetComponent<Rigidbody2D>();
             HexagonLight = GetComponent<Light2D>();
             InstanceSpriteRenderer = GetComponent<SpriteRenderer>();
+
             currentState = IdleState;
 
             currentState.EnterState(this);
         }
+
         void Update()
         {
             currentState.UpdateState(this);
         }
+
         void FixedUpdate()
         {
             currentState.FixedUpdateState(this);
@@ -52,7 +52,6 @@ namespace Barebones2D.NPC
             state.EnterState(this);
         }
 
-
         // Player enters/exits trigger collider -> start/exit follow state
         void OnTriggerEnter2D(Collider2D OtherCollider)
         {
@@ -60,12 +59,12 @@ namespace Barebones2D.NPC
             if (OtherCollider.gameObject.tag == "Player")
                 SetState(FollowState);
         }
+
         void OnTriggerExit2D(Collider2D OtherCollider)
         {
             if (currentState == IdleState) return;
             if (OtherCollider.gameObject.tag == "Player")
                 SetState(IdleState);
         }
-
     }
 }

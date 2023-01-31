@@ -24,22 +24,31 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "DashAction",
-                    "type": "Button",
+                    "name": "DodgeAction",
+                    "type": "Value",
                     "id": "64258f6c-c37a-4f6f-b834-a8e56261788f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "AttackAction",
-                    "type": "Button",
+                    "name": "MainAttackAction",
+                    "type": "Value",
                     "id": "7e117d85-d910-4bda-a531-80d35ee9e042",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "SecondaryAttackAction",
+                    "type": "Value",
+                    "id": "1dea7b39-cb57-4924-8030-887d2003d225",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -116,7 +125,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DashAction",
+                    "action": "DodgeAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -127,7 +136,84 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AttackAction",
+                    "action": "MainAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f265ff42-f19f-4cdc-8718-648375abd7ae",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MainAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5612aee4-119c-4de6-baa8-9f94c03b28c2",
+                    "path": "<Keyboard>/rightCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MainAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c632030f-a61e-4ffc-be82-4a7cc241b5f5",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MainAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0667b6d-d61d-4d08-b2a6-6ba38ea25241",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "224287c3-7a1d-4ad8-8e7d-e16fad8aa667",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "74a10e3c-ddd3-4c86-a550-2c65a293df33",
+                    "path": "<Keyboard>/OEM1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryAttackAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2acb964-37ce-4e88-8a28-edfe2573e346",
+                    "path": "<Keyboard>/slash",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryAttackAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
