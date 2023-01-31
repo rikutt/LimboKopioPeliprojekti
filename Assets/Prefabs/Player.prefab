@@ -161,7 +161,7 @@ MonoBehaviour:
   m_FalloffIntensity: 1
   m_Color: {r: 0.9811321, g: 0.7911764, b: 0.45817015, a: 1}
   m_Intensity: 1
-  m_LightVolumeIntensity: 0.26
+  m_LightVolumeIntensity: 0.08
   m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 2926f85ea1aec3c41f7e8f8b4b0f90ad
   m_LightCookieSprite: {fileID: 21300000, guid: 119f93d0bcbf1e743bf5fcf237507d39, type: 3}
@@ -210,7 +210,7 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1.8
+  m_PointLightInnerRadius: 2.95
   m_PointLightOuterRadius: 11.22
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
@@ -368,10 +368,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerInstance: {fileID: 2249484919418676885}
   maxSpeed: 11
-  _accelerationAmount: 10.5
-  _decelerationAmount: 9.5
+  accelerationSpeed: 10.5
+  decelerationSpeed: 9.5
   maxFallSpeed: -20
   maxFallWhileTouchingWalls: -4
+  airAcceleration: 7
+  airDeceleration: 5
 --- !u!114 &6006601525124361798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,11 +387,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInstance: {fileID: 2249484919418676885}
-  jumpForce: 12
-  wallJumpForce: 23
+  jumpForce: 15
+  wallJumpForce: 22
   jumpDelay: 0.3
   coyoteTime: 0.2
-  gravityScalerMaxTime: 0.4
+  gravityScalerMaxTime: 0.35
   doubleJumpAmount: 2
 --- !u!114 &7847394818340676800
 MonoBehaviour:
