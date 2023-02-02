@@ -117,43 +117,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_char_idle
+      name: PlayerWalking
       rect:
         serializedVersion: 2
-        x: 99
-        y: 15
-        width: 605
-        height: 1031
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 240
+        y: 14
+        width: 599
+        height: 1037
+      alignment: 9
+      pivot: {x: 0.61981875, y: 0.5015015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b77645e16937814d90fcb54a2beb03b
-      internalID: -987239758
+      spriteID: 76ee35578de1a5d4490e6049fc856b29
+      internalID: 590970296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_char_walking
+      name: PlayerIdle
       rect:
         serializedVersion: 2
-        x: 1081
-        y: 14
-        width: 599
-        height: 1037
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1216
+        y: 15
+        width: 605
+        height: 969
+      alignment: 9
+      pivot: {x: 0.62, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31a8732b2456f074cbd9a8d3035809c5
-      internalID: -1879303527
+      spriteID: 5df5a57a5bdbbac4fa7257d55dd847e7
+      internalID: 337953962
       vertices: []
       indices: 
       edges: []
@@ -169,8 +169,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      player_char_idle: -987239758
-      player_char_walking: -1879303527
+      PlayerIdle: 337953962
+      player_char_0: -1712075427
+      player_char_1: -517680702
+      PlayerWalking: 590970296
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

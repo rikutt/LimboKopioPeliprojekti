@@ -8,9 +8,8 @@ namespace Barebones2D.PlayerCombat
         private PlayerCombatStateMachine playerCombatStateMachine;
 
 
-        public void EnterState(PlayerManager _playerManagerInstance, PlayerCombatStateMachine _playerCombatStateMachine)
+        public void EnterState(PlayerCombatStateMachine _playerCombatStateMachine)
         {
-            playerManagerInstance = _playerManagerInstance;
             playerCombatStateMachine = _playerCombatStateMachine;
         }
         public void UpdateState() 

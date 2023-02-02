@@ -17,7 +17,7 @@ namespace Barebones2D.Movement
 {
     public class PlayerJump : MonoBehaviour
     {
-        [SerializeField] private PlayerManager PlayerInstance;
+        private PlayerManager playerManagerInstance;
 
         [SerializeField] private float jumpForce, wallJumpForce,
                          jumpDelay, coyoteTime,
@@ -32,6 +32,11 @@ namespace Barebones2D.Movement
 
         Vector2 JumpVelocity;
 
+        private void Start()
+        {
+            playerManagerInstance = GetComponent<PlayerManager>();
+        }
+
         private void Update()
         {
             if (jumpDelayTimer > 0)
@@ -44,7 +49,7 @@ namespace Barebones2D.Movement
                 gravityScalerTimer -= Time.deltaTime;
 
             // grounded and jump spam timer -> reset coyote and jump amount
-            if (PlayerInstance.IsGrounded && jumpDelayTimer <= 0)
+            if (playerManagerInstance.IsGrounded && jumpDelayTimer <= 0)
             {
                 doubleJumpCounter = doubleJumpAmount;
                 coyoteCheckTimer = coyoteTime;
@@ -55,43 +60,43 @@ namespace Barebones2D.Movement
 
         void GravityChangeOnJumpHold()
         {
-            if (PlayerInstance.JumpButtonValue > 0 && gravityScalerTimer > 0)
-                PlayerInstance.Rigidbody2D.gravityScale = 0.4f;
+            if (playerManagerInstance.JumpButtonValue > 0 && gravityScalerTimer > 0)
+                playerManagerInstance.Rigidbody2D.gravityScale = 0.4f;
 
             // faster fall
-            else if (PlayerInstance.JumpButtonValue == 0 || gravityScalerTimer < 0)
-                PlayerInstance.Rigidbody2D.gravityScale = 3f;
+            else if (playerManagerInstance.JumpButtonValue == 0 || gravityScalerTimer < 0)
+                playerManagerInstance.Rigidbody2D.gravityScale = 3f;
 
         }
         private void FixedUpdate()
         {
-            if (PlayerInstance.JumpButtonValue > 0)
+            if (playerManagerInstance.JumpButtonValue > 0)
                 Jumping();
 
             else
                 hasLetGoOfJump = true;
         }
-
         void Jumping()
         {
-            if (PlayerInstance.IsDodging || jumpDelayTimer > 0 || !hasLetGoOfJump)
+            if (playerManagerInstance.IsDodging || jumpDelayTimer > 0 || !hasLetGoOfJump)
                 return;
 
             // Normal / walljumps / no jump (normal jump maintains velocity.x)
-            if (PlayerInstance.IsTouchingRightWall && !PlayerInstance.IsGrounded)
+            if (playerManagerInstance.IsTouchingRightWall && !playerManagerInstance.IsGrounded)
                 JumpVelocity = new Vector2(-1.0f, 0.6f).normalized * wallJumpForce;
 
-            else if (PlayerInstance.IsTouchingLeftWall && !PlayerInstance.IsGrounded)
+            else if (playerManagerInstance.IsTouchingLeftWall && !playerManagerInstance.IsGrounded)
                 JumpVelocity = new Vector2(1.0f, 0.6f).normalized * wallJumpForce;
 
-            else if (PlayerInstance.IsGrounded || coyoteCheckTimer > 0 || doubleJumpCounter > 0)
-                JumpVelocity = new Vector2(PlayerInstance.Rigidbody2D.velocity.x, jumpForce);
+            else if (playerManagerInstance.IsGrounded || coyoteCheckTimer > 0 || doubleJumpCounter > 0)
+                JumpVelocity = new Vector2(playerManagerInstance.Rigidbody2D.velocity.x, jumpForce);
 
             else return;
             
-            PlayerInstance.Rigidbody2D.velocity = JumpVelocity;
+            playerManagerInstance.Rigidbody2D.velocity = JumpVelocity;
 
             hasLetGoOfJump = false;
+            playerManagerInstance.PlayerAnimations.JustJumped = true;
             --doubleJumpCounter;
 
             // timers reset

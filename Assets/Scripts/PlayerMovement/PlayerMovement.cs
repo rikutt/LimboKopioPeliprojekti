@@ -12,16 +12,16 @@ namespace Barebones2D.Movement
     public class PlayerMovement : MonoBehaviour
     {
 
-        [SerializeField] private PlayerManager PlayerInstance;
+        private PlayerManager playerManagerInstance;
 
         [SerializeField] private float maxSpeed, accelerationSpeed, 
                                        decelerationSpeed, maxFallSpeed, 
                                        maxFallWhileTouchingWalls;
 
         [SerializeField] private float airAcceleration, airDeceleration;
-        private void Update()
+        private void Start()
         {
-            
+            playerManagerInstance = GetComponent<PlayerManager>();
         }
 
         void FixedUpdate()
@@ -32,12 +32,12 @@ namespace Barebones2D.Movement
 
         void HorizontalMovement()
         {
-            if (PlayerInstance.IsDodging) return;
+            if (playerManagerInstance.IsDodging) return;
 
             float accelerationAmount;
             float decelerationAmount;
 
-            if (PlayerInstance.IsGrounded)
+            if (playerManagerInstance.IsGrounded)
             {
                 accelerationAmount = accelerationSpeed;
                 decelerationAmount = decelerationSpeed;
@@ -49,42 +49,42 @@ namespace Barebones2D.Movement
             }
                 
 
-            float targetSpeed = PlayerInstance.MovementDirectionVector2.x * maxSpeed;
+            float targetSpeed = playerManagerInstance.MovementDirectionVector2.x * maxSpeed;
             
 
             //when to accelerate/decelerate
             float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? accelerationAmount : decelerationAmount;
 
             // conserve momentum when moving faster than target
-            if (Mathf.Abs(PlayerInstance.Rigidbody2D.velocity.x) > Mathf.Abs(targetSpeed) 
-                && Mathf.Sign(PlayerInstance.Rigidbody2D.velocity.x) == Mathf.Sign(targetSpeed) 
-                && Mathf.Abs(targetSpeed) > 0.01f && !PlayerInstance.IsGrounded)
+            if (Mathf.Abs(playerManagerInstance.Rigidbody2D.velocity.x) > Mathf.Abs(targetSpeed) 
+                && Mathf.Sign(playerManagerInstance.Rigidbody2D.velocity.x) == Mathf.Sign(targetSpeed) 
+                && Mathf.Abs(targetSpeed) > 0.01f && !playerManagerInstance.IsGrounded)
             {
                 accelRate = 0;
             }
 
-            float speedDiff = targetSpeed - PlayerInstance.Rigidbody2D.velocity.x;
+            float speedDiff = targetSpeed - playerManagerInstance.Rigidbody2D.velocity.x;
             float movement = speedDiff * accelRate;
 
-            PlayerInstance.Rigidbody2D.AddForce(movement * Vector2.right, ForceMode2D.Force);
+            playerManagerInstance.Rigidbody2D.AddForce(movement * Vector2.right, ForceMode2D.Force);
         }
 
         // fall speed
         void ClampFallSpeedAndWallslide()
         {
-            if (PlayerInstance.IsDodging) return;
+            if (playerManagerInstance.IsDodging) return;
 
-            if (PlayerInstance.IsTouchingLeftWall || PlayerInstance.IsTouchingRightWall)
+            if (playerManagerInstance.IsTouchingLeftWall || playerManagerInstance.IsTouchingRightWall)
             {
-                Vector2 fallSpeed = PlayerInstance.Rigidbody2D.velocity;
+                Vector2 fallSpeed = playerManagerInstance.Rigidbody2D.velocity;
                 fallSpeed.y = Mathf.Clamp(fallSpeed.y, maxFallWhileTouchingWalls, 100f);
-                PlayerInstance.Rigidbody2D.velocity = fallSpeed;
+                playerManagerInstance.Rigidbody2D.velocity = fallSpeed;
             }
             else
             {
-                Vector2 fallSpeed = PlayerInstance.Rigidbody2D.velocity;
+                Vector2 fallSpeed = playerManagerInstance.Rigidbody2D.velocity;
                 fallSpeed.y = Mathf.Clamp(fallSpeed.y, maxFallSpeed, 100f);
-                PlayerInstance.Rigidbody2D.velocity = fallSpeed;
+                playerManagerInstance.Rigidbody2D.velocity = fallSpeed;
             }
         }
     }

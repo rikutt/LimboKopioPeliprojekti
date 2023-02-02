@@ -21,6 +21,10 @@ Yield return new WaitForFixedUpdate()
 
 eli... StateMachine alkaa. Set idleks state machinessa ja aloita updateemaan IdleStatea. Idle updatee, kunnes input tulee. 
 Nappi pohjassa, miss‰ katotaan onko p‰‰stetty irti? Managerissa?
+
+State timerit huvikseen fixed update frameina. Fixed update about 60/s 
+Perus tappelupeli tempo pohjalla menn‰‰n. 
+
  */
 
 namespace Barebones2D.PlayerCombat
@@ -28,19 +32,21 @@ namespace Barebones2D.PlayerCombat
     public class PlayerCombatStateMachine : MonoBehaviour
     {
         public IPlayerCombatState CurrentState { get; private set; }
+        public PlayerManager PlayerManagerInstance { get; private set; }
 
         private IPlayerCombatState nextState;
-        private PlayerManager playerManagerInstance;
-        // temp
+
+        // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
         public MeleeAttackProperties BasicAttack;
        
 
         private void Start()
         {
-            playerManagerInstance = GetComponent<PlayerManager>();
+            PlayerManagerInstance = GetComponent<PlayerManager>();
             nextState = new PlayerIdleCombatState();
-            // temp
-            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1, 1, 1.5f, 1.0f, 1.5f, 2.0f);
+
+            // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
+            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 20, 10, 2.0f);
         }
 
         private void Update()
@@ -67,7 +73,7 @@ namespace Barebones2D.PlayerCombat
                 CurrentState.ExitState();
 
             CurrentState = _newState;
-            CurrentState.EnterState(playerManagerInstance, this);
+            CurrentState.EnterState(this);
         }
 
         // What to call to change States
@@ -75,7 +81,6 @@ namespace Barebones2D.PlayerCombat
         {
             if (_nextState != null)
                 nextState = _nextState;
-
         }
     }
 }

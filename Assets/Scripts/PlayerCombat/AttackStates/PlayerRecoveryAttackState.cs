@@ -15,34 +15,35 @@ namespace Barebones2D.PlayerCombat
         private PlayerCombatStateMachine playerCombatStateMachine;
         private MeleeAttackProperties attackType;
 
-        private float stateTimer = 0;
+        private int stateFrameCounter;
 
         public PlayerRecoveryAttackState(MeleeAttackProperties _attackType)
         {
             attackType = _attackType;
         }
 
-        public void EnterState(PlayerManager _playerManagerInstance, PlayerCombatStateMachine _playerCombatStateMachine)
+        public void EnterState(PlayerCombatStateMachine _playerCombatStateMachine)
         {
-            playerManagerInstance = _playerManagerInstance;
             playerCombatStateMachine = _playerCombatStateMachine;
 
             Debug.Log("entered recovery state");
         }
         public void UpdateState() 
         {
-            stateTimer += Time.deltaTime;
+
         }
         public void FixedUpdateState()
         {
-            if (stateTimer >= attackType.RecoveryTime)
+            ++stateFrameCounter;
+
+            if (stateFrameCounter >= attackType.RecoveryFrames)
             {
-                playerCombatStateMachine.SetNextState(new PlayerRecoveryAttackState(attackType));
+                playerCombatStateMachine.SetNextState(new PlayerIdleCombatState());
             }
         }
         public void ExitState()
         {
-
+            stateFrameCounter = 0;
         }
     }
 }

@@ -1,3 +1,5 @@
+using Barebones2D.Animations;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,23 +13,21 @@ namespace Barebones2D
         public Rigidbody2D Rigidbody2D { get; private set; }
         public Collider2D Collider2D { get; private set; }
         public Transform SpriteTransform { get; private set; }
+        public PlayerAnimations PlayerAnimations { get; private set; }
 
-        // private set Input properties
-        public Vector2 MovementDirectionVector2 { get; private set; }
+        // private set Input properties. Törmäsin tohon field:SerializeField ni on täällä muistissa miten laitetaan property näkyviin
+        [field:SerializeField] public Vector2 MovementDirectionVector2 { get; private set; }
         public float JumpButtonValue { get; private set; }
         public float MainAttackButtonValue { get; private set; }
         public float DodgeButtonValue { get; private set; }
 
         // fields
-        [Header("Public bool fields, no touch!")]
-         
-
-        public bool IsFacingLeft;
-        public bool CanDodge; // can be controlled from other scripts without problems
-        public bool IsDodging; // used for things that can/can't be done while dodging
-        public bool IsGrounded;
-        public bool IsTouchingLeftWall, IsTouchingRightWall;
-
+        [NonSerialized] public bool IsFacingLeft;
+        [NonSerialized] public bool CanTurnAround = true;
+        [NonSerialized] public bool CanDodge; // can be controlled from other scripts without problems
+        [NonSerialized] public bool IsDodging; // used for things that can/can't be done while dodging
+        [NonSerialized] public bool IsGrounded;
+        [NonSerialized] public bool IsTouchingLeftWall, IsTouchingRightWall;
         public bool Invulnerable;
 
         [Header("Player Movement Speeds")]
@@ -49,6 +49,7 @@ namespace Barebones2D
             rightWallBox = transform.Find("CheckBoxes/RightWallCheckBox");
             platforms = LayerMask.GetMask("Platforms");
             SpriteTransform = transform.Find("Sprites");
+            PlayerAnimations = GetComponent<PlayerAnimations>();
         }
 
         // Setting every player Input value here. Because many scripts want to use them. 

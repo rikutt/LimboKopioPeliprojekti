@@ -55,8 +55,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6c93bd1bbe7339443ac88e13ad247996, type: 3}
   - {fileID: 21300000, guid: 2990393c5248e8d4f81b873a9a48d891, type: 3}
   - {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
-  - {fileID: -987239758, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
-  - {fileID: -1879303527, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
+  - {fileID: 337953962, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
+  - {fileID: 590970296, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
   - {fileID: 21300000, guid: 99c8cbaf594a6594aaca1bc54a9fe532, type: 3}
   m_PackedSpriteNamesToIndex:
   - limbo_copy_BC4
@@ -76,8 +76,8 @@ SpriteAtlas:
   - limbo_copy_BC1
   - limbo_copy_BC2
   - Illustration5_4
-  - player_char_idle
-  - player_char_walking
+  - PlayerIdle
+  - PlayerWalking
   - Illustration7_3
   m_RenderDataMap: {}
   m_Tag: testing
