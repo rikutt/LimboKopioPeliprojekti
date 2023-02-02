@@ -26,7 +26,9 @@ namespace Barebones2D.PlayerCombat
         {
             playerCombatStateMachine = _playerCombatStateMachine;
 
-            Debug.Log("entered recovery state");
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = false;
         }
         public void UpdateState() 
         {
@@ -43,7 +45,9 @@ namespace Barebones2D.PlayerCombat
         }
         public void ExitState()
         {
-            stateFrameCounter = 0;
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = true;
         }
     }
 }

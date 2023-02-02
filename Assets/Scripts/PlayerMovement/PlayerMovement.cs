@@ -14,11 +14,9 @@ namespace Barebones2D.Movement
 
         private PlayerManager playerManagerInstance;
 
-        [SerializeField] private float maxSpeed, accelerationSpeed, 
-                                       decelerationSpeed, maxFallSpeed, 
-                                       maxFallWhileTouchingWalls;
+        [SerializeField] private float maxFallSpeed, maxFallWhileTouchingWalls;
 
-        [SerializeField] private float airAcceleration, airDeceleration;
+        
         private void Start()
         {
             playerManagerInstance = GetComponent<PlayerManager>();
@@ -39,17 +37,17 @@ namespace Barebones2D.Movement
 
             if (playerManagerInstance.IsGrounded)
             {
-                accelerationAmount = accelerationSpeed;
-                decelerationAmount = decelerationSpeed;
+                accelerationAmount = playerManagerInstance.AccelerationSpeed;
+                decelerationAmount = playerManagerInstance.DecelerationSpeed;
             }
             else
             {
-                accelerationAmount = airAcceleration;
-                decelerationAmount = airDeceleration;
+                accelerationAmount = playerManagerInstance.AirAcceleration;
+                decelerationAmount = playerManagerInstance.AirDeceleration;
             }
                 
 
-            float targetSpeed = playerManagerInstance.MovementDirectionVector2.x * maxSpeed;
+            float targetSpeed = playerManagerInstance.MovementDirectionVector2.x * playerManagerInstance.MaxMovementSpeed;
             
 
             //when to accelerate/decelerate

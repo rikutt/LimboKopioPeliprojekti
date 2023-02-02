@@ -2,7 +2,9 @@ using UnityEngine;
 
 /*
  * Laitetaanko myös local scale flippi? varmaan ok täällä
- * 
+ * tarodev animaatio workflow 
+ * https://www.youtube.com/watch?v=ZwLekxsSY3Y
+ *  Animator.CrossFade
 */
 
 namespace Barebones2D.Animations

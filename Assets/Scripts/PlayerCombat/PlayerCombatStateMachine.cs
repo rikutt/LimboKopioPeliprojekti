@@ -31,14 +31,19 @@ namespace Barebones2D.PlayerCombat
 {
     public class PlayerCombatStateMachine : MonoBehaviour
     {
+        [field:SerializeField] public GameObject BasicWeaponObject { get; private set; }
+        [field: SerializeField] public GameObject WeaponParentPivot { get; private set; }
         public IPlayerCombatState CurrentState { get; private set; }
         public PlayerManager PlayerManagerInstance { get; private set; }
+
 
         private IPlayerCombatState nextState;
 
         // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
         public MeleeAttackProperties BasicAttack;
-       
+
+        public float AttackRotationZ;
+        
 
         private void Start()
         {
@@ -46,7 +51,7 @@ namespace Barebones2D.PlayerCombat
             nextState = new PlayerIdleCombatState();
 
             // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
-            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 20, 10, 2.0f);
+            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 5, 5, 0.5f);
         }
 
         private void Update()

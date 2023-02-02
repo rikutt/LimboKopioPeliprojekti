@@ -32,8 +32,9 @@ namespace Barebones2D
 
         [Header("Player Movement Speeds")]
         public float MaxMovementSpeed;
-        public float AccelerationSpeed;
-        public float DecelerationSpeed;
+        public float AccelerationSpeed, DecelerationSpeed;
+        public float AirAcceleration, AirDeceleration;
+
 
         private LayerMask platforms;
         private Transform groundBox;

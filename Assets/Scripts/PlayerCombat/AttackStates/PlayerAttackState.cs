@@ -22,10 +22,12 @@ namespace Barebones2D.PlayerCombat
         public void EnterState(PlayerCombatStateMachine _playerCombatStateMachine)
         {
             playerCombatStateMachine = _playerCombatStateMachine;
-            Debug.Log("entered Attack state");
 
-            // todo movement speed lowering with multiplier
-            // playerManagerInstance.
+            playerCombatStateMachine.BasicWeaponObject.SetActive(true);
+
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = false;
         }
         public void UpdateState() 
         {
@@ -42,7 +44,13 @@ namespace Barebones2D.PlayerCombat
         }
         public void ExitState()
         {
-           
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = true;
+            playerCombatStateMachine.BasicWeaponObject.SetActive(false);
+
+            // varmuuden vuoks ettei pelaaja j‰‰ hitaaks jos jotain menee vituiks
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = true;
         }
     }
 }

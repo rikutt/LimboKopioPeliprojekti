@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 /*
  * kerrotaan player movement attack multiplierilla
  * asetetaan CanTurnAround false
@@ -17,6 +18,7 @@ namespace Barebones2D.PlayerCombat
         // Asetetaan timer counter 0 niin voi slowata attack speediä kesken lyönnin muuttamalla attack type
         private int stateFrameCounter = 0;
 
+
         public PlayerWindupAttackState(MeleeAttackProperties _attackType)
         {
             attackType = _attackType;
@@ -25,14 +27,28 @@ namespace Barebones2D.PlayerCombat
         public void EnterState(PlayerCombatStateMachine _playerCombatStateMachine)
         {
             playerCombatStateMachine = _playerCombatStateMachine;
-            
-            Debug.Log("entered Attack Windup");
+
+            // movement speed multiplier (voi lossata pelin ajalla jotain accuracya mut ei tarpeeks että väliä :D
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = false;
+
+            // pelaajan movement vectorin (X absolutena Y (-1, 1) välillä) angle etumerkillä verrattuna vector.right(1,0)
+            // tulos miinuksena jos kattoo oikeelle... emt...
+            playerCombatStateMachine.AttackRotationZ = Vector2.SignedAngle(new Vector2(Mathf.Abs(playerCombatStateMachine.PlayerManagerInstance.MovementDirectionVector2.x), playerCombatStateMachine.PlayerManagerInstance.MovementDirectionVector2.y), Vector2.right);
+
+            if(playerCombatStateMachine.PlayerManagerInstance.IsFacingLeft)
+                playerCombatStateMachine.WeaponParentPivot.transform.rotation = Quaternion.AngleAxis(playerCombatStateMachine.AttackRotationZ, Vector3.forward);
+            else
+                playerCombatStateMachine.WeaponParentPivot.transform.rotation = Quaternion.AngleAxis(-playerCombatStateMachine.AttackRotationZ, Vector3.forward);
         }
+
         public void UpdateState() 
         {
             if (playerCombatStateMachine.PlayerManagerInstance.IsDodging)
                 playerCombatStateMachine.SetNextState(new PlayerIdleCombatState());
         }
+
         public void FixedUpdateState()
         {
             ++stateFrameCounter;
@@ -44,7 +60,10 @@ namespace Barebones2D.PlayerCombat
         }
         public void ExitState()
         {
-            
+            // varmuuden vuoks ettei pelaaja jää hitaaks jos jotain menee vituiks
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = true;
         }
     }
 }
