@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /* 
@@ -33,6 +31,10 @@ namespace Barebones2D.PlayerCombat
     {
         [field:SerializeField] public GameObject BasicWeaponObject { get; private set; }
         [field: SerializeField] public GameObject WeaponParentPivot { get; private set; }
+        [field: SerializeField] public Transform FurVomitSpawnPoint { get; private set; }
+        [field: SerializeField] public FurVomitProjectile FurVomitProjectileSpawn { get; private set; }
+
+        [SerializeField] private float vomitSpeed;
         public IPlayerCombatState CurrentState { get; private set; }
         public PlayerManager PlayerManagerInstance { get; private set; }
 
@@ -41,8 +43,10 @@ namespace Barebones2D.PlayerCombat
 
         // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
         public MeleeAttackProperties BasicAttack;
+        private FurVomitProjectile lastSpawnedFurVomit;
 
         public float AttackRotationZ;
+        public Vector2 AttackAngle;
         
 
         private void Start()
@@ -51,7 +55,7 @@ namespace Barebones2D.PlayerCombat
             nextState = new PlayerIdleCombatState();
 
             // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
-            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 5, 5, 0.5f);
+            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 5, 5, 0.5f, 8000f);
         }
 
         private void Update()
@@ -86,6 +90,29 @@ namespace Barebones2D.PlayerCombat
         {
             if (_nextState != null)
                 nextState = _nextState;
+        }
+
+
+
+        // vomit t‰‰ll‰ koska mono behaviour meh
+        public void VomitFur()
+        {
+            lastSpawnedFurVomit = Instantiate(FurVomitProjectileSpawn, FurVomitSpawnPoint.position, Quaternion.identity);
+            Rigidbody2D vomitRigidbody2D = lastSpawnedFurVomit.GetComponent<Rigidbody2D>();
+
+            Vector2 AttackAngle = PlayerManagerInstance.MovementDirectionVector2;
+            // pelaajan movement vectorin (X absolutena Y (-1, 1) v‰lill‰) angle etumerkill‰ verrattuna vector.right(1,0)
+            // tulos miinuksena jos kattoo oikeelle... emt...
+
+            if (PlayerManagerInstance.IsFacingLeft && AttackAngle == Vector2.zero)
+                vomitRigidbody2D.velocity = Vector2.left * vomitSpeed;
+
+            else if (!PlayerManagerInstance.IsFacingLeft && AttackAngle == Vector2.zero)
+                vomitRigidbody2D.velocity = Vector2.right * vomitSpeed;
+
+            else
+                vomitRigidbody2D.velocity = AttackAngle * vomitSpeed;
+
         }
     }
 }

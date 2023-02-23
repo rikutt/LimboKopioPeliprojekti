@@ -19,12 +19,14 @@ namespace Barebones2D
                 if (_health == 0 ) 
                 {
                     Debug.Log(transform.name + " is dead");
+                    Destroy(gameObject);
                 }
             }
         }
+
         private void OnValidate()
         {
             Health = _health;
         }
     }
-    }
+}

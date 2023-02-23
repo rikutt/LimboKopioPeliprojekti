@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 
 /*
@@ -33,14 +34,16 @@ namespace Barebones2D.PlayerCombat
             playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed *= attackType.AttackMoveSpeedMultiplier;
             playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = false;
 
+            playerCombatStateMachine.AttackAngle = playerCombatStateMachine.PlayerManagerInstance.MovementDirectionVector2;
             // pelaajan movement vectorin (X absolutena Y (-1, 1) välillä) angle etumerkillä verrattuna vector.right(1,0)
             // tulos miinuksena jos kattoo oikeelle... emt...
-            playerCombatStateMachine.AttackRotationZ = Vector2.SignedAngle(new Vector2(Mathf.Abs(playerCombatStateMachine.PlayerManagerInstance.MovementDirectionVector2.x), playerCombatStateMachine.PlayerManagerInstance.MovementDirectionVector2.y), Vector2.right);
+            playerCombatStateMachine.AttackRotationZ = Vector2.SignedAngle(new Vector2(Mathf.Abs(playerCombatStateMachine.AttackAngle.x), playerCombatStateMachine.AttackAngle.y), Vector2.right);
 
             if(playerCombatStateMachine.PlayerManagerInstance.IsFacingLeft)
                 playerCombatStateMachine.WeaponParentPivot.transform.rotation = Quaternion.AngleAxis(playerCombatStateMachine.AttackRotationZ, Vector3.forward);
             else
                 playerCombatStateMachine.WeaponParentPivot.transform.rotation = Quaternion.AngleAxis(-playerCombatStateMachine.AttackRotationZ, Vector3.forward);
+        
         }
 
         public void UpdateState() 

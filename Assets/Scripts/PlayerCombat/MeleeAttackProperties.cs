@@ -19,6 +19,8 @@ namespace Barebones2D.PlayerCombat
         public int AttackFrames { get; private set; }
         public int RecoveryFrames { get; private set; }
         public float AttackMoveSpeedMultiplier { get; private set; }
+        public float AttackForce { get; private set; }
+        public float AttackForceSelf { get; private set; }
         #endregion
 
         public MeleeAttackProperties(
@@ -29,7 +31,9 @@ namespace Barebones2D.PlayerCombat
             int _windupTime, 
             int _attackTime, 
             int _recoveryTime,
-            float _attackMoveSpeedMultiplier)
+            float _attackMoveSpeedMultiplier,
+            float _attackForce = 5000,
+            float _attackForceSelf = 500)
         {
             AttackInterruptibility = _interruptibility;
             DamageAmount = _damageAmount;
@@ -39,6 +43,8 @@ namespace Barebones2D.PlayerCombat
             AttackFrames = _attackTime;
             RecoveryFrames = _recoveryTime;
             AttackMoveSpeedMultiplier = _attackMoveSpeedMultiplier;
+            AttackForce = _attackForce;
+            AttackForceSelf= _attackForceSelf;
         }
     }
 }

@@ -38,6 +38,23 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 1957298561, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 1790584324, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 2060293442, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -1034202773, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -139422914, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -41882760, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 1289596878, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -1819705410, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 2112134861, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 1467566609, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 511674961, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -657736035, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 596295835, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 1697277856, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: 363766788, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -2083108326, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
+  - {fileID: -1272966205, guid: ee7d1e21dbbf56b4396adbbdc273145e, type: 3}
   - {fileID: 21300000, guid: bd96296476678a148b133196ee6363bc, type: 3}
   - {fileID: 21300000, guid: 1a55a0746a427454dbfe02c91ac5f402, type: 3}
   - {fileID: 21300000, guid: 90ea0e051c82904428cac6b3b96fab1c, type: 3}
@@ -55,10 +72,28 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6c93bd1bbe7339443ac88e13ad247996, type: 3}
   - {fileID: 21300000, guid: 2990393c5248e8d4f81b873a9a48d891, type: 3}
   - {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
+  - {fileID: 21300000, guid: 4c9bc55f27d85b64da4fcc8784e01d3c, type: 3}
   - {fileID: 337953962, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
   - {fileID: 590970296, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
   - {fileID: 21300000, guid: 99c8cbaf594a6594aaca1bc54a9fe532, type: 3}
   m_PackedSpriteNamesToIndex:
+  - Karvapallero_osat_11
+  - Karvapallero_osat_10
+  - Karvapallero_osat_13
+  - Karvapallero_osat_12
+  - Karvapallero_osat_15
+  - Karvapallero_osat_14
+  - Karvapallero_osat_16
+  - Karvapallero_osat_2
+  - Karvapallero_osat_3
+  - Karvapallero_osat_0
+  - Karvapallero_osat_1
+  - Karvapallero_osat_6
+  - Karvapallero_osat_7
+  - Karvapallero_osat_4
+  - Karvapallero_osat_5
+  - Karvapallero_osat_8
+  - Karvapallero_osat_9
   - limbo_copy_BC4
   - limbo_copy_BC3
   - Illustration5_12
@@ -76,6 +111,7 @@ SpriteAtlas:
   - limbo_copy_BC1
   - limbo_copy_BC2
   - Illustration5_4
+  - kokonainen_karvapallo
   - PlayerIdle
   - PlayerWalking
   - Illustration7_3

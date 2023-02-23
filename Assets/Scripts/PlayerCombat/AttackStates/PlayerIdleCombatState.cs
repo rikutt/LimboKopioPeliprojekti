@@ -22,6 +22,10 @@ namespace Barebones2D.PlayerCombat
             {
                 playerCombatStateMachine.SetNextState(new PlayerWindupAttackState(playerCombatStateMachine.BasicAttack));
             }
+            else if (playerCombatStateMachine.PlayerManagerInstance.SecondaryAttackButtonValue > 0)
+            {
+                playerCombatStateMachine.SetNextState(new ThrowUpState());
+            }
         }
         public void FixedUpdateState()
         {

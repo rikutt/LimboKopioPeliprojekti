@@ -19,6 +19,7 @@ namespace Barebones2D
         [field:SerializeField] public Vector2 MovementDirectionVector2 { get; private set; }
         public float JumpButtonValue { get; private set; }
         public float MainAttackButtonValue { get; private set; }
+        public float SecondaryAttackButtonValue { get; private set; }
         public float DodgeButtonValue { get; private set; }
 
         // fields
@@ -59,6 +60,8 @@ namespace Barebones2D
         void OnJumpAction(InputValue value) => JumpButtonValue = value.Get<float>();
 
         void OnMainAttackAction(InputValue value) => MainAttackButtonValue = value.Get<float>();
+
+        void OnSecondaryAttackAction(InputValue value) => SecondaryAttackButtonValue = value.Get<float>();
 
         void OnDodgeAction(InputValue value) => DodgeButtonValue = value.Get<float>();
 
