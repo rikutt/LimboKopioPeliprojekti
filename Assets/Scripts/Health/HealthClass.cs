@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Barebones2D
 {
@@ -9,6 +8,8 @@ namespace Barebones2D
         [SerializeField] int _health = 100;
         [Range(0, 1000)] public int MaxHealth = 200;
 
+        // testing unity events
+        public UnityEvent Death;
         public int Health
         {
             get => _health;
@@ -18,8 +19,8 @@ namespace Barebones2D
                 _health = Mathf.Clamp(value, 0, MaxHealth);
                 if (_health == 0 ) 
                 {
-                    Debug.Log(transform.name + " is dead");
-                    Destroy(gameObject);
+                    // invoke unity event on death, set in editor
+                    Death.Invoke();
                 }
             }
         }

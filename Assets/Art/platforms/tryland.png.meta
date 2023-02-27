@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11af639f5b449c043942eb3bf1b6cca1
+guid: 4bfc6e90fdd92c04ea1599a10a8c3067
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,43 +117,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalking
+      name: tryland_0
       rect:
         serializedVersion: 2
-        x: 240
-        y: 14
-        width: 599
-        height: 1037
-      alignment: 9
-      pivot: {x: 0.61981875, y: 0.5015015}
+        x: 0
+        y: 0
+        width: 500
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ee35578de1a5d4490e6049fc856b29
-      internalID: 590970296
+      spriteID: 28020246ed616874586f64c55f2fbb56
+      internalID: -1388845752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdle
+      name: tryland_1
       rect:
         serializedVersion: 2
-        x: 1216
-        y: 15
-        width: 605
-        height: 969
-      alignment: 9
-      pivot: {x: 0.62, y: 0.5}
+        x: 85
+        y: 38
+        width: 344
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5df5a57a5bdbbac4fa7257d55dd847e7
-      internalID: 337953962
+      spriteID: d7583b1ec048d224e993a7442ae2ebf1
+      internalID: -965197663
       vertices: []
       indices: 
       edges: []
@@ -169,10 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerIdle: 337953962
-      player_char_0: -1712075427
-      player_char_1: -517680702
-      PlayerWalking: 590970296
+      tryland_0: -1388845752
+      tryland_1: -965197663
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

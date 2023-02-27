@@ -30,7 +30,7 @@ namespace Barebones2D.Animations
         [SerializeField] private Animation furVomitBallRecovery;
 
         private bool isFalling;
-        private bool isIdle;
+        // private bool isIdle;
         public bool JustJumped { get; set; }
 
         private void Start()
@@ -57,7 +57,7 @@ namespace Barebones2D.Animations
             if (playerManagerInstance.MovementDirectionVector2.x == 0)
             {
                 // anim idle
-                isIdle = true;
+                
                 //SpriteTransform
             }
 
@@ -67,7 +67,7 @@ namespace Barebones2D.Animations
                 playerManagerInstance.IsFacingLeft = false;
                 playerManagerInstance.SpriteTransform.localScale = new Vector3(1, 1, 1);
                 // anim running/walking
-                isIdle = false;
+                
             }
 
             // run left
@@ -77,7 +77,7 @@ namespace Barebones2D.Animations
                 playerManagerInstance.IsFacingLeft = true;
                 playerManagerInstance.SpriteTransform.localScale = new Vector3(-1,1,1);
                 // anim running/walking
-                isIdle = false;
+                
             }
             if (playerManagerInstance.IsDodging)
             {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11af639f5b449c043942eb3bf1b6cca1
+guid: 63a4bd4ed0fe56a41beac3769c591af1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 350
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,43 +117,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalking
+      name: bat_0
       rect:
         serializedVersion: 2
-        x: 240
-        y: 14
-        width: 599
-        height: 1037
+        x: 2
+        y: 598
+        width: 301
+        height: 209
       alignment: 9
-      pivot: {x: 0.61981875, y: 0.5015015}
+      pivot: {x: 0.73952734, y: 0.7864964}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76ee35578de1a5d4490e6049fc856b29
-      internalID: 590970296
+      spriteID: cb30782c9c41bb9489f61160521006b3
+      internalID: -1251528096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdle
+      name: bat_1
       rect:
         serializedVersion: 2
-        x: 1216
-        y: 15
-        width: 605
-        height: 969
+        x: 408
+        y: 623
+        width: 221
+        height: 179
       alignment: 9
-      pivot: {x: 0.62, y: 0.5}
+      pivot: {x: 0.38941148, y: 0.4726924}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5df5a57a5bdbbac4fa7257d55dd847e7
-      internalID: 337953962
+      spriteID: 413358f1ede52bf4db3c712f4720fb72
+      internalID: -1100671465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_2
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 519
+        width: 212
+        height: 214
+      alignment: 9
+      pivot: {x: 0.28672647, y: 0.43147635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a943f0bc2f61845a70cf5f63a4e87b
+      internalID: -396689613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly2
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 390
+        width: 212
+        height: 243
+      alignment: 9
+      pivot: {x: 0.24061325, y: 0.13289827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387ff7cb34a31c249a426ffc52ecd420
+      internalID: -2086636996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly1
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 334
+        width: 221
+        height: 209
+      alignment: 9
+      pivot: {x: 0.3230577, y: 0.8625059}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a088854e6458e4f9fd145bec7078e9
+      internalID: 93153337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat_fly3
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 170
+        width: 224
+        height: 233
+      alignment: 9
+      pivot: {x: 0.33633915, y: 0.8723679}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee313fec37ccf544b96b1d2682c3eef0
+      internalID: -290694182
       vertices: []
       indices: 
       edges: []
@@ -169,10 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerIdle: 337953962
-      player_char_0: -1712075427
-      player_char_1: -517680702
-      PlayerWalking: 590970296
+      bat_fly3: -290694182
+      bat_0: -1251528096
+      bat_fly1: 93153337
+      bat_1: -1100671465
+      bat_fly2: -2086636996
+      bat_2: -396689613
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
