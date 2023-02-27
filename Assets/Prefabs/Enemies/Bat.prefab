@@ -302,8 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ee08a54c1bfcd42abc65b628097fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 11
-  slowingSpeed: 5
+  batDamageAmount: 10
+  moveSpeed: 6
+  slowingSpeed: 4
   patrolChangeDistance: 2
   patrolPosition:
   - {fileID: 0}

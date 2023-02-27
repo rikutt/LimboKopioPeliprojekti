@@ -92,7 +92,7 @@ namespace Barebones2D
                 stateHasStarted = true;
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, currentMoveTarget.position, slowingSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, currentMoveTarget.position, moveSpeed * Time.deltaTime);
         }
 
         void Slowing()
