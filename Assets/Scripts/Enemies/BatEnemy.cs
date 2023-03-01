@@ -1,8 +1,8 @@
 using UnityEngine;
 
-// ahhhh... Lepakot patrol asetettuja transformeja
-// Tarpeeks l‰hell‰ pelaajaa menee slow moodiin. L‰htee pois kun pelaaja ei ole en‰‰ triggeriss‰. 
-// 
+// ahhhh... Lepakot patrollaa editorissa asetettuja transformeja
+// Tarpeeks l‰hell‰ pelaajaa menee slow stateen. L‰htee pois kun pelaaja ei ole en‰‰ triggeriss‰. 
+// Lepakko ei interactaa paljoa fysiikan kanssa, joten looppi on updatessa ja liikkuminen on transform.move towards
 
 namespace Barebones2D.Enemies
 {

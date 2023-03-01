@@ -303,8 +303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batDamageAmount: 10
-  moveSpeed: 6
-  slowingSpeed: 4
+  batCollisionForceAmount: 2000
+  moveSpeed: 9
+  slowingSpeed: 6
   patrolChangeDistance: 2
   patrolPosition:
   - {fileID: 0}
