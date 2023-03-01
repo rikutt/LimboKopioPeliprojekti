@@ -22,7 +22,7 @@ namespace Barebones2D
         public float SecondaryAttackButtonValue { get; private set; }
         public float DodgeButtonValue { get; private set; }
 
-        // fields
+        // fields poistettu näkyvistä editorissa ettei niitä naputella tai vie tilaa
         [NonSerialized] public bool IsFacingLeft;
         [NonSerialized] public bool CanTurnAround = true;
         [NonSerialized] public bool CanDodge; // can be controlled from other scripts without problems

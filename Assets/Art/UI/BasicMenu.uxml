@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Art/UI/StyleSheet.uss?fileID=7433441132597879392&amp;guid=aa46d91747bd22a4db2ac796d82653b0&amp;type=3#StyleSheet" />
+    <ui:VisualElement style="left: auto; width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Art/UI/UI_TESTI_start.png?fileID=2800000&amp;guid=1ee40b0ec635bf642a26f2ae9782e124&amp;type=3#UI_TESTI_start&apos;); -unity-background-scale-mode: stretch-to-fill;">
+        <ui:VisualElement class="BasicListElement" style="position: absolute; bottom: 75px; height: 307px; width: 353px; left: 423px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="StartGameButton" class="StartMenuButton" />
+            <ui:Button text="Controls" display-tooltip-when-elided="true" name="ControlsButton" class="StartMenuButton" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" class="StartMenuButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

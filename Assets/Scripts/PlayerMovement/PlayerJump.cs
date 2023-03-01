@@ -21,7 +21,7 @@ namespace Barebones2D.Movement
 
         [SerializeField] private float jumpForce, wallJumpForce,
                          jumpDelay, coyoteTime,
-                         gravityScalerMaxTime;
+                         gravityScalerMaxTime, gravityScale, gravityScaleHoldingJump;
 
         [SerializeField] private int doubleJumpAmount;
         private int doubleJumpCounter;
@@ -61,11 +61,11 @@ namespace Barebones2D.Movement
         void GravityChangeOnJumpHold()
         {
             if (playerManagerInstance.JumpButtonValue > 0 && gravityScalerTimer > 0)
-                playerManagerInstance.Rigidbody2D.gravityScale = 0.4f;
+                playerManagerInstance.Rigidbody2D.gravityScale = gravityScaleHoldingJump;
 
             // faster fall
             else if (playerManagerInstance.JumpButtonValue == 0 || gravityScalerTimer < 0)
-                playerManagerInstance.Rigidbody2D.gravityScale = 3f;
+                playerManagerInstance.Rigidbody2D.gravityScale = gravityScale;
 
         }
         private void FixedUpdate()
@@ -83,10 +83,10 @@ namespace Barebones2D.Movement
 
             // Normal / walljumps / no jump (normal jump maintains velocity.x)
             if (playerManagerInstance.IsTouchingRightWall && !playerManagerInstance.IsGrounded)
-                JumpVelocity = new Vector2(-1.0f, 0.6f).normalized * wallJumpForce;
+                JumpVelocity = new Vector2(-1.0f, 0.33f).normalized * wallJumpForce;
 
             else if (playerManagerInstance.IsTouchingLeftWall && !playerManagerInstance.IsGrounded)
-                JumpVelocity = new Vector2(1.0f, 0.6f).normalized * wallJumpForce;
+                JumpVelocity = new Vector2(1.0f, 0.33f).normalized * wallJumpForce;
 
             else if (playerManagerInstance.IsGrounded || coyoteCheckTimer > 0 || doubleJumpCounter > 0)
                 JumpVelocity = new Vector2(playerManagerInstance.Rigidbody2D.velocity.x, jumpForce);

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Barebones2D
+namespace Barebones2D.Enemies
 {
     public class EnemyDeaths : MonoBehaviour
     {

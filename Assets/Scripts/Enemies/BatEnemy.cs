@@ -4,12 +4,13 @@ using UnityEngine;
 // Tarpeeks l‰hell‰ pelaajaa menee slow moodiin. L‰htee pois kun pelaaja ei ole en‰‰ triggeriss‰. 
 // 
 
-namespace Barebones2D
+namespace Barebones2D.Enemies
 {
     
     public class BatEnemy : MonoBehaviour
     {
-        [SerializeField] private int batDamageAmount = 10; 
+        [SerializeField] private int batDamageAmount = 10;
+        [SerializeField] private int batCollisionForceAmount = 200;
         [SerializeField] private float moveSpeed = 3;
         [SerializeField] private float slowingSpeed = 2;
         [SerializeField] private float patrolChangeDistance = 2;
@@ -17,7 +18,7 @@ namespace Barebones2D
         private int patrolNumber = 0;
 
         private Animator animator;
-        private Rigidbody2D batRigidbody;
+        //private Rigidbody2D batRigidbody;
         private Transform currentMoveTarget;
         private bool stateHasStarted;
 
@@ -33,7 +34,7 @@ namespace Barebones2D
         void Start()
         {
             animator = GetComponent<Animator>();
-            batRigidbody = GetComponent<Rigidbody2D>();
+            //batRigidbody = GetComponent<Rigidbody2D>();
             currentMoveTarget = patrolPosition[patrolNumber];
 
             // see where first target is
@@ -76,6 +77,7 @@ namespace Barebones2D
             }
         }
 
+        // hard coded local scale flip
         private void FlipLocalScale()
         {
             if (Mathf.Sign(transform.position.x - currentMoveTarget.position.x) == -1)
@@ -126,6 +128,10 @@ namespace Barebones2D
 
             if (collidedObject.CompareTag("Player"))
             {
+                if (collidedObject.TryGetComponent(out Rigidbody2D rbody2D))
+                {
+                    rbody2D.AddForce(new Vector2(transform.localScale.x * batCollisionForceAmount, 0));
+                }
                 if (collidedObject.TryGetComponent(out HealthClass playerHealth))
                 {
                     // Vois laittaa slow systeemin t‰nne. 

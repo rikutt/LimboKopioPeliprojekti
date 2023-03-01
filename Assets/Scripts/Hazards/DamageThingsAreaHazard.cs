@@ -6,12 +6,14 @@ namespace Barebones2D.Hazards
     {
         [SerializeField] private int hazardDamage;
         [SerializeField] private float hazardForceAmountVertical;
+        [SerializeField] private float minRandomForceAmountHorizontal;
+        [SerializeField] private float maxRandomForceAmountHorizontal;
         private void OnCollisionEnter2D(Collision2D otherCollider)
         {
             if (otherCollider.gameObject.TryGetComponent(out HealthClass collidedHealth))
             {
                 collidedHealth.Health -= hazardDamage;
-                otherCollider.rigidbody.AddForce(new Vector2(Random.Range(0, 100), hazardForceAmountVertical));
+                otherCollider.rigidbody.AddForce(new Vector2(Random.Range(minRandomForceAmountHorizontal, maxRandomForceAmountHorizontal), hazardForceAmountVertical));
             }
         }
     }
