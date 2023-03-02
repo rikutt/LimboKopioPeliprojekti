@@ -10,6 +10,7 @@ namespace Barebones2D
 
         // testing unity events
         public UnityEvent Death;
+        public UnityEvent OnTakingDamage;
         public int Health
         {
             get => _health;
@@ -21,6 +22,10 @@ namespace Barebones2D
                 {
                     // invoke unity event on death, set in editor
                     Death.Invoke();
+                }
+                else
+                {
+                    OnTakingDamage.Invoke();
                 }
             }
         }
