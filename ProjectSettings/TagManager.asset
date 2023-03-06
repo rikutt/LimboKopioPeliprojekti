@@ -41,3 +41,33 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ReallyFar
+    uniqueID: 2409633355
+    locked: 0
+  - name: BackgroundFar
+    uniqueID: 953810701
+    locked: 0
+  - name: Background
+    uniqueID: 672354945
+    locked: 0
+  - name: BackgroundClose
+    uniqueID: 1167751965
+    locked: 0
+  - name: PlayerdepthFar
+    uniqueID: 3301158561
+    locked: 0
+  - name: Playerdepth
+    uniqueID: 1593321001
+    locked: 0
+  - name: PlayerdepthClose
+    uniqueID: 2911899467
+    locked: 0
+  - name: ForegroundFar
+    uniqueID: 2326003407
+    locked: 0
+  - name: Foreground
+    uniqueID: 2247907151
+    locked: 0
+  - name: ForegroundClose
+    uniqueID: 3522342417
+    locked: 0
