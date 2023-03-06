@@ -12,7 +12,7 @@ namespace Barebones2D.Movement
     public class PlayerDodge : MonoBehaviour
     {
 
-        [SerializeField] private PlayerManager PlayerInstance;
+        private PlayerManager playerManagerInstance;
 
         [SerializeField] private float dodgeDuration, dodgeCooldown,
                                        dodgeSpeed, dodgeEndingSpeed;
@@ -29,7 +29,8 @@ namespace Barebones2D.Movement
         // default value is false so set true here
         private void Start()
         {
-            PlayerInstance.CanDodge = true;
+            playerManagerInstance = GetComponent<PlayerManager>();
+            playerManagerInstance.CanDodge = true;
         }
         private void Update()
         {
@@ -40,14 +41,14 @@ namespace Barebones2D.Movement
                 dodgeDurationTimer -= Time.deltaTime;
 
             // checks for smooth dodge
-            if (PlayerInstance.DodgeButtonValue == 0)
+            if (playerManagerInstance.DodgeButtonValue == 0)
                 HasLetGoOfDodgeKey = true;
 
-            if (dodgeDurationTimer <= 0 && !dodgeHasReset && PlayerInstance.IsGrounded)
+            if (dodgeDurationTimer <= 0 && !dodgeHasReset && playerManagerInstance.IsGrounded)
                 dodgeHasReset = true;
 
             // try dodging
-            if (PlayerInstance.DodgeButtonValue > 0)
+            if (playerManagerInstance.DodgeButtonValue > 0)
                 DodgeStart();
         }
 
@@ -63,11 +64,11 @@ namespace Barebones2D.Movement
             // IsDodging ni ei voi spammia
             // has let go ni ei voi pit‰‰ pohjassa + buffer feeling
             // cooldown ran down <= 0
-            if (!PlayerInstance.CanDodge)
+            if (!playerManagerInstance.CanDodge)
                 return;
             if (!dodgeHasReset)
                 return;
-            if (PlayerInstance.IsDodging)
+            if (playerManagerInstance.IsDodging)
                 return;
             if (!HasLetGoOfDodgeKey)
                 return;
@@ -77,37 +78,37 @@ namespace Barebones2D.Movement
                 dodgeDurationTimer = dodgeDuration;
                 dodgeHasReset = false;
                 HasLetGoOfDodgeKey = false;
-                PlayerInstance.IsDodging = true;
+                playerManagerInstance.IsDodging = true;
 
-                // Set speeds for each dodge
-                if (PlayerInstance.MovementDirectionVector2 == Vector2.zero)
+                // Set direction and speed for stationary dodge
+                if (playerManagerInstance.MovementDirectionVector2 == Vector2.zero)
                 {
                     // sprite childs local scale x to dash direction. Not normalized, dont scale x over 1...
-                    Vector2 IdleMovementDirectionVector = new Vector2(PlayerInstance.SpriteTransform.localScale.x, 0);
+                    Vector2 IdleMovementDirectionVector = new Vector2(playerManagerInstance.SpriteTransform.localScale.x, 0);
                     dodgeVelocity = IdleMovementDirectionVector * dodgeSpeed;
                     dodgeEndingVelocity = IdleMovementDirectionVector * dodgeEndingSpeed;
                 }
                 else
                 {
-                    dodgeVelocity = PlayerInstance.MovementDirectionVector2.normalized * dodgeSpeed;
-                    dodgeEndingVelocity = PlayerInstance.MovementDirectionVector2.normalized * dodgeEndingSpeed;
+                    dodgeVelocity = playerManagerInstance.MovementDirectionVector2.normalized * dodgeSpeed;
+                    dodgeEndingVelocity = playerManagerInstance.MovementDirectionVector2.normalized * dodgeEndingSpeed;
                 }
             }
         }
 
         private void Dodging()
         {
-            if (!PlayerInstance.IsDodging)
+            if (!playerManagerInstance.IsDodging)
                 return;
 
             if (dodgeDurationTimer > 0)
             {
-                PlayerInstance.Rigidbody2D.velocity = dodgeVelocity;
+                playerManagerInstance.Rigidbody2D.velocity = dodgeVelocity;
             }
             else
             {
-                PlayerInstance.Rigidbody2D.velocity = dodgeEndingVelocity;
-                PlayerInstance.IsDodging = false;
+                playerManagerInstance.Rigidbody2D.velocity = dodgeEndingVelocity;
+                playerManagerInstance.IsDodging = false;
             }
         }
     }

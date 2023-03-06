@@ -1,26 +1,30 @@
 using UnityEngine;
 
+// täällä otetaan vastaan inputit ja luodaan State classit oikeineen Attack tyyppeineen
+
 namespace Barebones2D.PlayerCombat
 {
     public class PlayerIdleCombatState : IPlayerCombatState
     {
-        private PlayerManager playerManagerInstance;
         private PlayerCombatStateMachine playerCombatStateMachine;
         
 
-        public void EnterState(PlayerManager _playerManagerInstance, PlayerCombatStateMachine _playerCombatStateMachine)
+        public void EnterState(PlayerCombatStateMachine _playerCombatStateMachine)
         {
-            playerManagerInstance = _playerManagerInstance;
             playerCombatStateMachine = _playerCombatStateMachine;
         }
         public void UpdateState() 
         {
-            if (playerManagerInstance.IsDodging)
+            if (playerCombatStateMachine.PlayerManagerInstance.IsDodging)
                 return;
             // what button and what attack type to send forward
-            if (playerManagerInstance.MainAttackButtonValue > 0 )
+            if (playerCombatStateMachine.PlayerManagerInstance.MainAttackButtonValue > 0 )
             {
                 playerCombatStateMachine.SetNextState(new PlayerWindupAttackState(playerCombatStateMachine.BasicAttack));
+            }
+            else if (playerCombatStateMachine.PlayerManagerInstance.SecondaryAttackButtonValue > 0)
+            {
+                playerCombatStateMachine.SetNextState(new ThrowUpState());
             }
         }
         public void FixedUpdateState()

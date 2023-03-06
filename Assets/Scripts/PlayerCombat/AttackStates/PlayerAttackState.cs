@@ -11,7 +11,7 @@ namespace Barebones2D.PlayerCombat
         private PlayerCombatStateMachine playerCombatStateMachine;
         private MeleeAttackProperties attackType;
 
-        private float stateTimer = 0;
+        private int stateFrameCounter = 0;
 
         public PlayerAttackState(MeleeAttackProperties _attackType)
         {
@@ -19,29 +19,38 @@ namespace Barebones2D.PlayerCombat
         }
 
 
-        public void EnterState(PlayerManager _playerManagerInstance, PlayerCombatStateMachine _playerCombatStateMachine)
+        public void EnterState(PlayerCombatStateMachine _playerCombatStateMachine)
         {
-            playerManagerInstance = _playerManagerInstance;
             playerCombatStateMachine = _playerCombatStateMachine;
-            Debug.Log("entered Attack state");
 
-            // todo movement speed lowering with multiplier
-            // playerManagerInstance.
+            playerCombatStateMachine.BasicWeaponObject.SetActive(true);
+
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed *= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = false;
         }
         public void UpdateState() 
         {
-            stateTimer += Time.deltaTime;
+
         }
         public void FixedUpdateState()
         {
-            if (stateTimer >= attackType.AttackTime)
+            ++stateFrameCounter;
+
+            if (stateFrameCounter >= attackType.AttackFrames)
             {
                 playerCombatStateMachine.SetNextState(new PlayerRecoveryAttackState(attackType));
             }
         }
         public void ExitState()
         {
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = true;
+            playerCombatStateMachine.BasicWeaponObject.SetActive(false);
 
+            // varmuuden vuoks ettei pelaaja j‰‰ hitaaks jos jotain menee vituiks
+            playerCombatStateMachine.PlayerManagerInstance.DecelerationSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.MaxMovementSpeed /= attackType.AttackMoveSpeedMultiplier;
+            playerCombatStateMachine.PlayerManagerInstance.CanTurnAround = true;
         }
     }
 }

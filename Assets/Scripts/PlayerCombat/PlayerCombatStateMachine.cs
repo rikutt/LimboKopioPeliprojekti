@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /* 
@@ -21,26 +19,43 @@ Yield return new WaitForFixedUpdate()
 
 eli... StateMachine alkaa. Set idleks state machinessa ja aloita updateemaan IdleStatea. Idle updatee, kunnes input tulee. 
 Nappi pohjassa, miss‰ katotaan onko p‰‰stetty irti? Managerissa?
+
+State timerit huvikseen fixed update frameina. Fixed update about 60/s 
+Perus tappelupeli tempo pohjalla menn‰‰n. 
+
  */
 
 namespace Barebones2D.PlayerCombat
 {
     public class PlayerCombatStateMachine : MonoBehaviour
     {
+        [field:SerializeField] public GameObject BasicWeaponObject { get; private set; }
+        [field: SerializeField] public GameObject WeaponParentPivot { get; private set; }
+        [field: SerializeField] public Transform FurVomitSpawnPoint { get; private set; }
+        [field: SerializeField] public FurVomitProjectile FurVomitProjectileSpawn { get; private set; }
+
+        [SerializeField] private float vomitSpeed;
         public IPlayerCombatState CurrentState { get; private set; }
+        public PlayerManager PlayerManagerInstance { get; private set; }
+
 
         private IPlayerCombatState nextState;
-        private PlayerManager playerManagerInstance;
-        // temp
+
+        // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
         public MeleeAttackProperties BasicAttack;
-       
+        private FurVomitProjectile lastSpawnedFurVomit;
+
+        public float AttackRotationZ;
+        public Vector2 AttackAngle;
+        
 
         private void Start()
         {
-            playerManagerInstance = GetComponent<PlayerManager>();
+            PlayerManagerInstance = GetComponent<PlayerManager>();
             nextState = new PlayerIdleCombatState();
-            // temp
-            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1, 1, 1.5f, 1.0f, 1.5f, 2.0f);
+
+            // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
+            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 5, 5, 0.5f, 8000f);
         }
 
         private void Update()
@@ -67,7 +82,7 @@ namespace Barebones2D.PlayerCombat
                 CurrentState.ExitState();
 
             CurrentState = _newState;
-            CurrentState.EnterState(playerManagerInstance, this);
+            CurrentState.EnterState(this);
         }
 
         // What to call to change States
@@ -75,6 +90,28 @@ namespace Barebones2D.PlayerCombat
         {
             if (_nextState != null)
                 nextState = _nextState;
+        }
+
+
+
+        // vomit t‰‰ll‰ koska mono behaviour meh
+        public void VomitFur()
+        {
+            lastSpawnedFurVomit = Instantiate(FurVomitProjectileSpawn, FurVomitSpawnPoint.position, Quaternion.identity);
+            Rigidbody2D vomitRigidbody2D = lastSpawnedFurVomit.GetComponent<Rigidbody2D>();
+
+            Vector2 AttackAngle = PlayerManagerInstance.MovementDirectionVector2;
+            // pelaajan movement vectorin (X absolutena Y (-1, 1) v‰lill‰) angle etumerkill‰ verrattuna vector.right(1,0)
+            // tulos miinuksena jos kattoo oikeelle... emt...
+
+            if (PlayerManagerInstance.IsFacingLeft && AttackAngle == Vector2.zero)
+                vomitRigidbody2D.velocity = Vector2.left * vomitSpeed;
+
+            else if (!PlayerManagerInstance.IsFacingLeft && AttackAngle == Vector2.zero)
+                vomitRigidbody2D.velocity = Vector2.right * vomitSpeed;
+
+            else
+                vomitRigidbody2D.velocity = AttackAngle * vomitSpeed;
 
         }
     }
