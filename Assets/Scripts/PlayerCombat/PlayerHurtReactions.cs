@@ -13,21 +13,16 @@ namespace Barebones2D.PlayerCombat
             originalMoveSpeed = playerManagerInstance.MaxMovementSpeed;
         }
 
-        public void HurtByBossWolf(bool isHowlAttack, float moveSpeedReduction)
+        public void PlayerHurt()
         {
+            // play animation
+            // play sound
+            // disable movement things?
 
-            if (isHowlAttack)
-            {
-
-                playerManagerInstance.MaxMovementSpeed = moveSpeedReduction;
-            }
-
-            else
-            {
-
-            }
-
-
+        }
+        private void Update()
+        {
+            
         }
     }
 }

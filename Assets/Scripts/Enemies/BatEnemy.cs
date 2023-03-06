@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using UnityEngine;
 
 // ahhhh... Lepakot patrollaa editorissa asetettuja transformeja
@@ -116,6 +117,7 @@ namespace Barebones2D.Enemies
 
             else
                 currentState = BatState.Flying;
+
 
 
             stateHasStarted = false;

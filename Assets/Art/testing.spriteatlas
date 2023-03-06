@@ -39,6 +39,10 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 64029b30ba20a144ab440e2fdf93e36b, type: 3}
+  - {fileID: -1137047425, guid: d95e48709b675984a94e96f2e871631d, type: 3}
+  - {fileID: -1005760764, guid: d95e48709b675984a94e96f2e871631d, type: 3}
+  - {fileID: 1708918277, guid: d95e48709b675984a94e96f2e871631d, type: 3}
+  - {fileID: -311039394, guid: d95e48709b675984a94e96f2e871631d, type: 3}
   - {fileID: 21300000, guid: 404b4e900bf16bd4fa3755cc759a70e4, type: 3}
   - {fileID: -1388845752, guid: 4bfc6e90fdd92c04ea1599a10a8c3067, type: 3}
   - {fileID: -965197663, guid: 4bfc6e90fdd92c04ea1599a10a8c3067, type: 3}
@@ -94,9 +98,20 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7179b67a57f1b1542b362ef10a0dcd78, type: 3}
   - {fileID: 21300000, guid: ade529fab37d7434a9cca637cb0d727a, type: 3}
   - {fileID: 21300000, guid: 6c93bd1bbe7339443ac88e13ad247996, type: 3}
+  - {fileID: -109401646, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: -494451643, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: -1417934691, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: 1235587591, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: -633188119, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: -1431410218, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: -1225801085, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: 1452791988, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
+  - {fileID: 649786531, guid: 35866b5b0daea954695dcafb469b3169, type: 3}
   - {fileID: 21300000, guid: 2990393c5248e8d4f81b873a9a48d891, type: 3}
   - {fileID: 21300000, guid: 189dac5ce106d71489496ffcc5b661b8, type: 3}
   - {fileID: 21300000, guid: 2f898c2dd9cc4c54c8683b75c1178fc6, type: 3}
+  - {fileID: -222250157, guid: c9ac607d9da6e4046b75261c60cf9393, type: 3}
+  - {fileID: 1774373648, guid: c9ac607d9da6e4046b75261c60cf9393, type: 3}
   - {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
   - {fileID: 21300000, guid: 43664e9d54bea5b4580a24daa10869e6, type: 3}
   - {fileID: 21300000, guid: 94a354fd619bd624cbcb056d3ddb2df7, type: 3}
@@ -119,6 +134,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 99c8cbaf594a6594aaca1bc54a9fe532, type: 3}
   m_PackedSpriteNamesToIndex:
   - isopuu1
+  - "sein\xE4_thik_kulma"
+  - "sein\xE4_thik_allraund"
+  - "sein\xE4_thik_2reuna"
+  - "sein\xE4_thik_reuna"
   - Howl_Particle
   - tryland_0
   - tryland_1
@@ -174,9 +193,20 @@ SpriteAtlas:
   - isopuu3
   - isopuu2
   - limbo_copy_BC1
+  - leijuva1
+  - leijuva2
+  - leijuva_long
+  - "leijuva_m\xE4ki"
+  - leijuva_mid
+  - "sein\xE4_thin_allraund"
+  - "sein\xE4_mid_allround"
+  - "sein\xE4_mid"
+  - "sein\xE4_thin"
   - limbo_copy_BC2
   - UI_TESTI_hela
   - purrgatory_assets_10
+  - viisto1
+  - viisto2
   - Illustration5_4
   - "limbo_p\xE4\xE4ty_vas"
   - tryland2

@@ -11,6 +11,7 @@ namespace Barebones2D
         // testing unity events
         public UnityEvent Death;
         public UnityEvent OnTakingDamage;
+
         public int Health
         {
             get => _health;
