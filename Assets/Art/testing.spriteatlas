@@ -39,6 +39,7 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 64029b30ba20a144ab440e2fdf93e36b, type: 3}
+<<<<<<< Updated upstream
   - {fileID: -1137047425, guid: d95e48709b675984a94e96f2e871631d, type: 3}
   - {fileID: -1005760764, guid: d95e48709b675984a94e96f2e871631d, type: 3}
   - {fileID: 1708918277, guid: d95e48709b675984a94e96f2e871631d, type: 3}
@@ -94,6 +95,19 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1d40b88753ae8714cb0f08746cbcc2bd, type: 3}
   - {fileID: 21300000, guid: b6eee0d7f238fef40aa1a5888d7ae43f, type: 3}
   - {fileID: 21300000, guid: 76432bf7673cd0042beadd655ad6ab0c, type: 3}
+=======
+  - {fileID: 21300000, guid: dae6f2c0881a9db4e8168fd0f41c8d9c, type: 3}
+  - {fileID: 21300000, guid: 7b398702cf4e8374cb5d1ae88adc4a1d, type: 3}
+  - {fileID: 21300000, guid: 1de23ee2c3c95504cb94058aa27283dd, type: 3}
+  - {fileID: 21300000, guid: 8bab5523aba11b2448fc7ff0ff79a19b, type: 3}
+  - {fileID: 21300000, guid: b76193a33cf450c47afbef9ae005cf5d, type: 3}
+  - {fileID: 21300000, guid: bd96296476678a148b133196ee6363bc, type: 3}
+  - {fileID: 21300000, guid: 1a55a0746a427454dbfe02c91ac5f402, type: 3}
+  - {fileID: 21300000, guid: ad1501e4a5a35a045b2c2d41ff984754, type: 3}
+  - {fileID: 21300000, guid: 90ea0e051c82904428cac6b3b96fab1c, type: 3}
+  - {fileID: 21300000, guid: bcc3dfd6534649147990abafd9112647, type: 3}
+  - {fileID: 21300000, guid: bf360e776114cdf48b6e1f26f959463f, type: 3}
+>>>>>>> Stashed changes
   - {fileID: 21300000, guid: 57d69308972cff94dbe463dc8073c318, type: 3}
   - {fileID: 21300000, guid: 9c884d686599d0041ad58804b345b4b2, type: 3}
   - {fileID: -1666990964, guid: adf95b2986f08ab4387ce0b6c8cdce93, type: 3}
@@ -105,7 +119,10 @@ SpriteAtlas:
   - {fileID: -2053319782, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
   - {fileID: -1137386456, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
   - {fileID: -1444501905, guid: a9b6fb5a77278564a8424e369f9df4e8, type: 3}
+<<<<<<< Updated upstream
   - {fileID: 21300000, guid: 4eb7df5aec9f3a24a88e590937250beb, type: 3}
+=======
+>>>>>>> Stashed changes
   - {fileID: 21300000, guid: 7179b67a57f1b1542b362ef10a0dcd78, type: 3}
   - {fileID: 21300000, guid: ade529fab37d7434a9cca637cb0d727a, type: 3}
   - {fileID: 21300000, guid: 6c93bd1bbe7339443ac88e13ad247996, type: 3}
@@ -124,6 +141,7 @@ SpriteAtlas:
   - {fileID: -222250157, guid: c9ac607d9da6e4046b75261c60cf9393, type: 3}
   - {fileID: 1774373648, guid: c9ac607d9da6e4046b75261c60cf9393, type: 3}
   - {fileID: 21300000, guid: ddd02b8dc371eca4288b04233a997e3f, type: 3}
+<<<<<<< Updated upstream
   - {fileID: 21300000, guid: 43664e9d54bea5b4580a24daa10869e6, type: 3}
   - {fileID: 21300000, guid: 94a354fd619bd624cbcb056d3ddb2df7, type: 3}
   - {fileID: 21300000, guid: 23aa29fdd78ce4d4c8d699f01c446495, type: 3}
@@ -201,6 +219,26 @@ SpriteAtlas:
   - start_export
   - controls_base_export
   - purrgatory_assets_8
+=======
+  - {fileID: 21300000, guid: 23aa29fdd78ce4d4c8d699f01c446495, type: 3}
+  - {fileID: 21300000, guid: 31f71c6e9865d624892c32cda214272d, type: 3}
+  - {fileID: -987239758, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
+  - {fileID: -1879303527, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
+  - {fileID: 21300000, guid: 99c8cbaf594a6594aaca1bc54a9fe532, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - isopuu1
+  - puut1_pohja
+  - "BGv\xE4ri_pohja"
+  - puut2_pohja
+  - puut2_keski
+  - puut1_keski
+  - limbo_copy_BC4
+  - limbo_copy_BC3
+  - Isopuu4
+  - Illustration5_12
+  - puut1_huippu
+  - Illustration7_4
+>>>>>>> Stashed changes
   - "Bgv\xE4ri_huippu"
   - limbo_copy_BC5
   - TempRock2
@@ -212,7 +250,10 @@ SpriteAtlas:
   - Illustration5_2_0
   - Illustration5_2_1
   - Illustration5_2_2
+<<<<<<< Updated upstream
   - limbo_copy_BC4
+=======
+>>>>>>> Stashed changes
   - isopuu3
   - isopuu2
   - limbo_copy_BC1
@@ -231,6 +272,7 @@ SpriteAtlas:
   - viisto1
   - viisto2
   - Illustration5_4
+<<<<<<< Updated upstream
   - "limbo_p\xE4\xE4ty_vas"
   - tryland2
   - "bGv\xE4ri_keski"
@@ -250,6 +292,12 @@ SpriteAtlas:
   - UI_TESTI_controls
   - PlayerIdle
   - PlayerWalking
+=======
+  - "bGv\xE4ri_keski"
+  - Puut2_huippu
+  - player_char_idle
+  - player_char_walking
+>>>>>>> Stashed changes
   - Illustration7_3
   m_RenderDataMap: {}
   m_Tag: testing
