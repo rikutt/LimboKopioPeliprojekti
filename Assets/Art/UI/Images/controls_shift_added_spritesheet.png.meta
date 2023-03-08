@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,553 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 683
+        width: 289
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f18e02479fef648aa559fd48c1fefb
+      internalID: 322464763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 948
+        width: 21
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc354d5bfc37e5409708fcbd513fe98
+      internalID: 288411918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 950
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d6005314147d143ad9ad4ff341982f
+      internalID: -984443052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 948
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd27e1c9aad73947b361f66df490b76
+      internalID: -2131421592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 951
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd19c4dc68361c4abf17d179df5084c
+      internalID: -415974740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 788
+        width: 116
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843f6d8248b432842a40caf56b22c005
+      internalID: 166455472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 798
+        width: 24
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7ed2bcb58b4dc41bf0493991894a6a
+      internalID: -1594686970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 801
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f63e5cedcc00146992e364d40f64e8
+      internalID: 1877345611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 801
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ff33256e7a1d246b5b86f1e4099f54
+      internalID: -121144446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 803
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e026ea7d15ccf148b53163862d30672
+      internalID: -1714816141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 794
+        width: 25
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8e67ca1a5296644945929afa4779bf
+      internalID: 600836192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 587
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c309c85c5c8afc14d85d1b32c7dd9c1c
+      internalID: 150389412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 505
+        width: 221
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02968b84354e7a141b19eaeb8c0bd02a
+      internalID: 276207078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 615
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5ff72cc861ff54aaf3ea304262ed25
+      internalID: 1678117272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 618
+        width: 20
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01200e82e4f0b654fbc5d1c15e462487
+      internalID: 2031791104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 620
+        width: 20
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7feb086607fd9f46b5d3ec700e79ae7
+      internalID: 909807594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 620
+        width: 13
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f2825b0d34ec54eb6387f72aeee2da
+      internalID: 252208234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 451
+        width: 49
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8832c0f25860bc64783d8fb4ef59b7cf
+      internalID: 377973448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 452
+        width: 21
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2ca5108a276824a93b1d8d01217624
+      internalID: -708736322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 454
+        width: 20
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55f7d612b4b2954ba6abfaf42ebd0ff
+      internalID: 91527262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 451
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c86c64e734f0449ade508d46e5e18c
+      internalID: -1422154342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 301
+        width: 57
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25541ba486338d84093c5f0aee8ef755
+      internalID: -1938901076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 132
+        width: 204
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806e3ca75c95e244da0fe93b19d6a24c
+      internalID: -286849787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 191
+        width: 359
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326bee346cf25d241b8c42436470250a
+      internalID: 1948123594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 130
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1463eca7aca8e4f814a7793303eb41
+      internalID: -1731435701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: controls_shift_added_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 32
+        width: 298
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bab19695d8ed345a26ae8ad89e5863
+      internalID: 524062637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +672,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      controls_shift_added_spritesheet_11: -1594686970
+      controls_shift_added_spritesheet_22: 1678117272
+      controls_shift_added_spritesheet_16: 585591146
+      controls_shift_added_spritesheet_30: -1938901076
+      controls_shift_added_spritesheet_6: 1297907628
+      controls_shift_added_spritesheet_24: 909807594
+      controls_shift_added_spritesheet_7: -2071210351
+      controls_shift_added_spritesheet_47: 941331248
+      controls_shift_added_spritesheet_31: -286849787
+      controls_shift_added_spritesheet_40: 1800752595
+      controls_shift_added_spritesheet_46: 944460699
+      controls_shift_added_spritesheet_21: 276207078
+      controls_shift_added_spritesheet_39: 1752715169
+      controls_shift_added_spritesheet_49: 19602741
+      controls_shift_added_spritesheet_19: 1407280586
+      controls_shift_added_spritesheet_37: 416695818
+      controls_shift_added_spritesheet_1: 288411918
+      controls_shift_added_spritesheet_9: -1468696307
+      controls_shift_added_spritesheet_3: -2131421592
+      controls_shift_added_spritesheet_48: 586258209
+      controls_shift_added_spritesheet_23: 2031791104
+      controls_shift_added_spritesheet_36: 252364272
+      controls_shift_added_spritesheet_41: 902695670
+      controls_shift_added_spritesheet_28: 91527262
+      controls_shift_added_spritesheet_50: -555851181
+      controls_shift_added_spritesheet_18: -169104025
+      controls_shift_added_spritesheet_20: 150389412
+      controls_shift_added_spritesheet_29: -1422154342
+      controls_shift_added_spritesheet_17: -465659312
+      controls_shift_added_spritesheet_14: -1714816141
+      controls_shift_added_spritesheet_10: 166455472
+      controls_shift_added_spritesheet_38: 1215842245
+      controls_shift_added_spritesheet_42: 1948123594
+      controls_shift_added_spritesheet_8: 441632580
+      controls_shift_added_spritesheet_15: 600836192
+      controls_shift_added_spritesheet_34: -1597807829
+      controls_shift_added_spritesheet_26: 377973448
+      controls_shift_added_spritesheet_44: 1981625324
+      controls_shift_added_spritesheet_2: -984443052
+      controls_shift_added_spritesheet_32: -1157979690
+      controls_shift_added_spritesheet_13: -121144446
+      controls_shift_added_spritesheet_25: 252208234
+      controls_shift_added_spritesheet_35: 463647439
+      controls_shift_added_spritesheet_12: 1877345611
+      controls_shift_added_spritesheet_51: -1694922828
+      controls_shift_added_spritesheet_27: -708736322
+      controls_shift_added_spritesheet_45: 1627069145
+      controls_shift_added_spritesheet_4: -415974740
+      controls_shift_added_spritesheet_43: -1731435701
+      controls_shift_added_spritesheet_5: 524062637
+      controls_shift_added_spritesheet_33: -1480654909
+      controls_shift_added_spritesheet_0: 322464763
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
