@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="BasicMenu" src="project://database/Assets/Art/UI/Layouts/BasicMenu.uxml?fileID=9197481963319205126&amp;guid=35017b13b44626640b160dda1616ce17&amp;type=3#BasicMenu" />
+    <ui:Template name="ControlsMenu" src="project://database/Assets/Art/UI/Layouts/ControlsMenu.uxml?fileID=9197481963319205126&amp;guid=65d5b3f5e6733a7478175cd554e3194a&amp;type=3#ControlsMenu" />
+    <Style src="project://database/Assets/Art/UI/StyleSheet.uss?fileID=7433441132597879392&amp;guid=aa46d91747bd22a4db2ac796d82653b0&amp;type=3#StyleSheet" />
+    <ui:Instance template="BasicMenu" name="BasicMenu" style="flex-grow: 1; display: flex;" />
+    <ui:Instance template="ControlsMenu" name="ControlsMenu" style="flex-grow: 1; display: none;" />
+</ui:UXML>

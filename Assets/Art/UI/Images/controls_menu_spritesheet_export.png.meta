@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Q
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 930
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff7b8898e64e0f49af18369e05bd08f
+      internalID: 4808048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 931
+        width: 61
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7f646395e91ce429eea4f2438e4257
+      internalID: -1603170948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 741
+        width: 56
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bf64d56a7771a4699c3b5eb423daf7
+      internalID: -1342317110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 739
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35535d02534aae499837eddebd6acba
+      internalID: -2098044325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RMB
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 611
+        width: 203
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b6afb8c13225e4086a7f5b62f6b9a3
+      internalID: -280204918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 651
+        width: 115
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d835398a23cbc324d9b7f205961c5a0a
+      internalID: 731563955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spacebar
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 360
+        width: 359
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a9bdbb6d2653946a6d902477610f8c
+      internalID: 1927120065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 519
+        width: 48
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827f1360d30d1b344aa370598254688e
+      internalID: -458459847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LMB
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 113
+        width: 208
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db059ac88d66b1c4f86e258f617befbc
+      internalID: -1549412404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controls
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 882
+        width: 304
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5de561cd3a7fe448d80180181ddf1c
+      internalID: 1753796275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Move
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 106
+        width: 92
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0280a70469c69f149a9246fef90ed1c1
+      internalID: 1612565556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 347
+        width: 99
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228bfb059d8e4ee42bb3b3eb2bbb2f48
+      internalID: -1116845181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furball
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 555
+        width: 145
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882976172535193459f7e6cbe90cf32b
+      internalID: 274444965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throw
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 554
+        width: 121
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d18e8c2e84d98d49be21c27e2ac0bf4
+      internalID: -1702261189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 759
+        width: 129
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a07826561396f548a8f96b0b52033ef
+      internalID: -2135407035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dodge
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 950
+        width: 114
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e43b0f5b45c1143ad8a026f5543b76
+      internalID: 865937884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 136
+        width: 191
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8654e0c25c34a147ad307065b0ba6a9
+      internalID: -622055667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +483,56 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      controls_menu_spritesheet_export_12: 673496324
+      controls_menu_spritesheet_export_31: 230174993
+      controls_menu_spritesheet_export_44: -435814624
+      controls_menu_spritesheet_export_23: 667250161
+      controls_menu_spritesheet_export_11: 765783940
+      controls_menu_spritesheet_export_41: 2068780909
+      controls_menu_spritesheet_export_45: 2124466895
+      controls_menu_spritesheet_export_37: -1660063653
+      controls_menu_spritesheet_export_47: 496800433
+      Attack: -2135407035
+      controls_menu_spritesheet_export_40: -1437375210
+      controls_menu_spritesheet_export_18: 186258992
+      S: -2098044325
+      controls_menu_spritesheet_export_42: 1887477815
+      controls_menu_spritesheet_export_46: 426595947
+      controls_menu_spritesheet_export_19: -1407416683
+      controls_menu_spritesheet_export_26: 1048737810
+      controls_menu_spritesheet_export_38: -1830947306
+      controls_menu_spritesheet_export_13: -464399516
+      controls_menu_spritesheet_export_27: -1039859394
+      controls_menu_spritesheet_export_24: 1158654035
+      controls_menu_spritesheet_export_28: -1668960218
+      controls_menu_spritesheet_export_48: -236252193
+      D: -458459847
+      controls_menu_spritesheet_export_29: -1676462271
+      Jump: -1116845181
+      controls_menu_spritesheet_export_43: -45493645
+      controls_menu_spritesheet_export_10: 739075633
+      W: -1603170948
+      RMB: -280204918
+      Dodge: 865937884
+      Move: 1612565556
+      Q: 4808048
+      Furball: 274444965
+      Spacebar: 1927120065
+      controls_menu_spritesheet_export_39: 1670205628
+      controls_menu_spritesheet_export_30: 875898857
+      Throw: -1702261189
+      controls_menu_spritesheet_export_35: 1775140750
+      Controls: 1753796275
+      controls_menu_spritesheet_export_25: -28922801
+      controls_menu_spritesheet_export_17: 648937890
+      Space: -622055667
+      A: -1342317110
+      controls_menu_spritesheet_export_20: 19959725
+      Button: 731563955
+      LMB: -1549412404
+      controls_menu_spritesheet_export_21: 214407714
+      controls_menu_spritesheet_export_32: -1230891335
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

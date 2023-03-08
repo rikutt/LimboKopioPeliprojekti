@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art/UI/UI_TESTI_controls.png?fileID=2800000&amp;guid=672fee6f9df6e694d81793d61e8056af&amp;type=3#UI_TESTI_controls&apos;); flex-grow: 1; -unity-background-image-tint-color: rgba(255, 255, 255, 255);">
+        <ui:Button text="X" display-tooltip-when-elided="true" name="Exit" style="position: absolute; top: 100px; left: 1101px; height: 50px; width: 63px; font-size: 50px; color: rgba(36, 36, 36, 255); -unity-font-style: bold;" />
+    </ui:VisualElement>
+</ui:UXML>
