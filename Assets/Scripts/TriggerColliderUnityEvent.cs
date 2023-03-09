@@ -11,6 +11,7 @@ namespace Barebones2D
         private void OnTriggerEnter2D(Collider2D collision)
         {
             OnTriggerEnter.Invoke();
+            Destroy(gameObject);
         }
         private void OnTriggerExit2D(Collider2D collision)
         {

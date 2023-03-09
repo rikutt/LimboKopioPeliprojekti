@@ -58,6 +58,8 @@ namespace Barebones2D.Animations
                 isFalling = false;
                 // anim fallImpact
 
+                //falling hit footstep sound and reset timer
+                stepsTimer = footstepTime;
                 playerAudioSource.PlayOneShot(footstepSound, 0.5f);
             }
             if (!playerManagerInstance.IsGrounded)
