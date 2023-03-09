@@ -15,7 +15,6 @@ namespace Barebones2D.Enemies
 {
     public class BossWolfBehave : MonoBehaviour
     {
-
         [SerializeField] private float moveSpeed = 5;
         [SerializeField] private float patrolMoveSpeed = 2.5f;
         [SerializeField] private float howlTriggerDistance;
@@ -28,13 +27,13 @@ namespace Barebones2D.Enemies
         private Rigidbody2D wolfRigidbody;
         private WolfState currentState;
         private enum WolfState
-
         {
             Idle,
             Aggro,
             Howl,
             Patrol
         }
+
         private void TurnAroundCheck()
         {
             if (wolfRigidbody.velocity.x > 0)

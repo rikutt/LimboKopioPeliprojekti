@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Animations;
 
 /*
  * Laitetaanko myös local scale flippi? varmaan ok täällä
@@ -22,6 +23,7 @@ namespace Barebones2D.Animations
         [SerializeField] private float footstepTime;
         private float stepsTimer;
 
+        [SerializeField] private Animator animator;
         [SerializeField] private Animation jumping;
         [SerializeField] private Animation running;
         [SerializeField] private Animation dodging;
@@ -66,6 +68,7 @@ namespace Barebones2D.Animations
             {
                 isFalling = true;
                 // anim falling
+                animator.CrossFade("InAir", 0);
             }
             if (JustJumped)
             {
@@ -74,10 +77,10 @@ namespace Barebones2D.Animations
 
                 playerAudioSource.PlayOneShot(footstepSound, 0.5f);
             }
-            if (playerManagerInstance.MovementDirectionVector2.x == 0)
+            if (playerManagerInstance.MovementDirectionVector2.x == 0 && playerManagerInstance.IsGrounded)
             {
                 // anim idle
-                
+                animator.CrossFade("Idle", 0);
                 //SpriteTransform
             }
 
@@ -86,11 +89,15 @@ namespace Barebones2D.Animations
             {
                 playerManagerInstance.IsFacingLeft = false;
                 playerManagerInstance.SpriteTransform.localScale = new Vector3(1, 1, 1);
-                // anim running/walking
-
-                // if on ground play sound
+                
+                    // if on ground play sound
                 if (playerManagerInstance.IsGrounded)
+                {
                     PlayFootstepSound();
+
+                    // anim running/walking
+                    animator.CrossFade("Running", 0);
+                }
             }
 
             // run left
@@ -100,17 +107,19 @@ namespace Barebones2D.Animations
                 playerManagerInstance.IsFacingLeft = true;
                 playerManagerInstance.SpriteTransform.localScale = new Vector3(-1,1,1);
                 // anim running/walking
-
-                // if on ground play sound
                 if (playerManagerInstance.IsGrounded)
+                {
                     PlayFootstepSound();
 
-
+                    // anim running/walking
+                    animator.CrossFade("Running", 0);
+                }
             }
+
             if (playerManagerInstance.IsDodging)
             {
                 // anim dodge
-                
+                animator.CrossFade("InAir", 0);
                 PlayDodgeWhooshSound();
             }
             

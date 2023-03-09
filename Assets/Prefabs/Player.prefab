@@ -48,7 +48,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.408
-  m_Color: {r: 0.19379672, g: 0.59142, b: 0.6132076, a: 1}
+  m_Color: {r: 0.5566928, g: 0.8490566, b: 0.8461028, a: 1}
   m_Intensity: 0.6
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -159,9 +159,9 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.4575472, g: 1, b: 0.9710912, a: 1}
+  m_Color: {r: 0.7924528, g: 0.6167675, b: 0.6330682, a: 1}
   m_Intensity: 1
-  m_LightVolumeIntensity: 0.08
+  m_LightVolumeIntensity: 0.07
   m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 2926f85ea1aec3c41f7e8f8b4b0f90ad
   m_LightCookieSprite: {fileID: 21300000, guid: 119f93d0bcbf1e743bf5fcf237507d39, type: 3}
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 1043533540}
   - component: {fileID: 902757676}
   - component: {fileID: 902757677}
+  - component: {fileID: 902757689}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -611,6 +612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e22783f980df1749bb1bc7ddbf740ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAudioSource: {fileID: 5056731234772330878}
+  footstepSound: {fileID: 8300000, guid: 322ade9c11165e54aaeec48f8adebb3d, type: 3}
+  dodgeWhooshSound: {fileID: 8300000, guid: 79f7c8fda80ec6649bdb1911124c1dfb, type: 3}
+  footstepTime: 0.28
   jumping: {fileID: 0}
   running: {fileID: 0}
   dodging: {fileID: 0}
@@ -679,6 +684,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!81 &902757689
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2249484919418676882}
+  m_Enabled: 1
 --- !u!1 &2249484919428528279
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +776,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2249484919428528279}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &2249484919428528283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,6 +1628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7646317076649484522}
   - component: {fileID: 9197570358977784237}
+  - component: {fileID: 110730529}
   m_Layer: 0
   m_Name: Sprites
   m_TagString: Untagged
@@ -1682,7 +1696,7 @@ SpriteRenderer:
   m_SortingLayerID: 1593321001
   m_SortingLayer: 6
   m_SortingOrder: 1
-  m_Sprite: {fileID: 590970296, guid: 11af639f5b449c043942eb3bf1b6cca1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3db91ea6d8bb9814cbd2827bb1620c73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1693,6 +1707,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &110730529
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386531750074402029}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9fbcd00a3727f744d9353d93fffbcdb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6879596469492448660
 GameObject:
   m_ObjectHideFlags: 0

@@ -73,6 +73,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "beabde6e-b7f7-404e-b422-7c5b75fb4ec6",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector",
                     "id": "f8f7d71f-9131-40cf-9a5b-7e978074b3af",
                     "path": "2DVector(mode=1)",
@@ -140,6 +151,28 @@
                 },
                 {
                     "name": "",
+                    "id": "47954e00-0c06-4cea-bf8b-8f0999156b1d",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DodgeAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c60f83b-b99c-46f8-8074-338c024336a6",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DodgeAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a25e7faa-2dd2-435c-a440-ea1fb8b98c29",
                     "path": "<Keyboard>/ctrl",
                     "interactions": "",
@@ -185,7 +218,7 @@
                 {
                     "name": "",
                     "id": "f0667b6d-d61d-4d08-b2a6-6ba38ea25241",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
