@@ -39,6 +39,7 @@ namespace Barebones2D.PlayerCombat
         public PlayerManager PlayerManagerInstance { get; private set; }
 
 
+
         private IPlayerCombatState nextState;
 
         // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
@@ -55,7 +56,7 @@ namespace Barebones2D.PlayerCombat
             nextState = new PlayerIdleCombatState();
 
             // temp kunnes keksin paremman tavan luoda/s‰ilytt‰‰ attack dataa
-            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 10, 1f, 1f, 10, 5, 5, 0.5f, 8000f);
+            BasicAttack = new MeleeAttackProperties(InterruptibilityEnum.Flinchable, 5, 1f, 1f, 7, 10, 3, 0.5f, 8000f);
         }
 
         private void Update()

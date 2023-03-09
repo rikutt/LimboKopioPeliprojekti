@@ -12,7 +12,7 @@ namespace Barebones2D
             // could add effects for death here
             Player.SetActive(true);
             Player.transform.position = currentCheckpoint.position;
-            Player.GetComponent<HealthClass>().Health = 9999;
+            Player.GetComponent<HealthClass>().Health = 50;
         }
 
         public void ChangeCheckpoint(Transform newTransform)

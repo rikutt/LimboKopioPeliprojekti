@@ -4,11 +4,23 @@
 
 .StartMenuButton {
     position: relative;
-    height: 103px;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     background-color: rgba(0, 0, 0, 0);
-    opacity: 0;
+    opacity: 0.57;
     cursor: initial;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgba(145, 142, 140, 255);
+    border-right-color: rgba(145, 142, 140, 255);
+    border-top-color: rgba(145, 142, 140, 255);
+    border-bottom-color: rgba(145, 142, 140, 255);
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 98%;
+    height: 33%;
 }

@@ -7,7 +7,7 @@ namespace Barebones2D.PlayerCombat
 {
     public class FurVomitProjectile : MonoBehaviour
     {
-        [SerializeField] private int VomitDamage = 5;
+        [SerializeField] private int VomitDamage = 11;
         [SerializeField] private float destroyTime;
 
         public Rigidbody2D vomitRigidbody { get; private set; }

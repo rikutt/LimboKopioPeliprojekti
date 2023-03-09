@@ -1,11 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/Art/UI/StyleSheet.uss?fileID=7433441132597879392&amp;guid=aa46d91747bd22a4db2ac796d82653b0&amp;type=3#StyleSheet" />
-    <ui:VisualElement style="left: auto; width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Art/UI/Images/start_export.png?fileID=2800000&amp;guid=1d40b88753ae8714cb0f08746cbcc2bd&amp;type=3#start_export&apos;); -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgb(255, 255, 255);">
-        <ui:VisualElement class="BasicListElement" style="position: absolute; bottom: 67px; height: 315px; width: 344px; left: 482px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;">
-            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="StartGameButton" class="StartMenuButton" style="overflow: hidden;" />
-            <ui:Button text="Controls" display-tooltip-when-elided="true" name="ControlsButton" class="StartMenuButton" />
-            <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" class="StartMenuButton" />
+    <ui:VisualElement style="left: auto; width: 100%; height: 100%; -unity-background-scale-mode: scale-to-fit; -unity-background-image-tint-color: rgb(255, 255, 255); background-image: url(&apos;project://database/Assets/Art/UI/Images/start_export.png?fileID=21300000&amp;guid=1d40b88753ae8714cb0f08746cbcc2bd&amp;type=3#start_export&apos;); -unity-slice-left: 1; -unity-slice-top: 1; -unity-slice-right: 1; -unity-slice-bottom: 1; align-items: center; flex-grow: 1; flex-basis: auto; justify-content: center; min-width: auto; min-height: auto; flex-shrink: 1;">
+        <ui:VisualElement style="position: relative; height: 45%; width: 27%; top: 18%; align-items: center; justify-content: flex-start; flex-wrap: nowrap; flex-grow: 0; left: -1%; flex-shrink: 0;">
+            <ui:Button display-tooltip-when-elided="true" name="StartGameButton" class="StartMenuButton" style="overflow: hidden; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <ui:Button display-tooltip-when-elided="true" name="ControlsButton" class="StartMenuButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <ui:Button display-tooltip-when-elided="true" name="QuitButton" class="StartMenuButton" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
         </ui:VisualElement>
-        <ui:Button text="Mute" display-tooltip-when-elided="true" enable-rich-text="true" name="MuteButton" style="position: absolute; height: 32px; width: 56px; top: 34px; left: 802px; background-color: rgb(134, 130, 129); color: rgb(120, 0, 8);" />
+        <ui:Button text="Mute" display-tooltip-when-elided="true" enable-rich-text="true" name="MuteButton" style="position: relative; height: 32px; width: 56px; background-color: rgb(134, 130, 129); color: rgb(120, 0, 8); top: -45%; left: -14%;" />
     </ui:VisualElement>
 </ui:UXML>
