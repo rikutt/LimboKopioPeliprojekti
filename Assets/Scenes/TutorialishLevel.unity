@@ -8144,7 +8144,7 @@ MonoBehaviour:
   m_Intensity: 0.3
   m_LightVolumeIntensity: 0.7
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 2926f85e
+  m_ApplyToSortingLayers: 2926f85ea1aec3c44b0f90ad
   m_LightCookieSprite: {fileID: 21300000, guid: 119f93d0bcbf1e743bf5fcf237507d39, type: 3}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -17044,15 +17044,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_FalloffIntensity
-      value: 0.684
+      value: 0.695
       objectReference: {fileID: 0}
     - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_PointLightInnerRadius
-      value: 3.08
+      value: 7.19
       objectReference: {fileID: 0}
     - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 16.3
+      value: 17.8
       objectReference: {fileID: 0}
     - target: {fileID: 309339388, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
@@ -17074,21 +17074,29 @@ PrefabInstance:
       propertyPath: Death.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1677261492}
+    - target: {fileID: 1676572235, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676572235, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_Color.b
-      value: 0.7679552
+      value: 0.9276967
       objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_Color.g
-      value: 0.8301887
+      value: 0.9716981
       objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_Color.r
-      value: 0.57564974
+      value: 0.79294235
       objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_Intensity
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_FalloffIntensity
@@ -17104,7 +17112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 12.85
+      value: 16.8
       objectReference: {fileID: 0}
     - target: {fileID: 1676572236, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_LightVolumeIntensityEnabled
@@ -17116,11 +17124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2249484919418676880, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.63
+      value: -17.1
       objectReference: {fileID: 0}
     - target: {fileID: 2249484919418676880, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.28
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 2249484919418676880, guid: c67d6caa827fe904caed20c08ad7917a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21822,6 +21830,8 @@ MonoBehaviour:
   - {fileID: 1244044909}
   - {fileID: 220276267}
   - {fileID: 1348366099}
+  howlSpawnPoint: {fileID: 955504998}
+  howlParticle: {fileID: 721931227399553299, guid: 9c917939ed203004bbad35a7a2135ad0, type: 3}
 --- !u!61 &648398363
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32856,6 +32866,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4029561271454060883, guid: c928b09094d5b164091dc8b24ce25330, type: 3}
   m_PrefabInstance: {fileID: 900773200}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &955504997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 955504998}
+  m_Layer: 7
+  m_Name: HowlSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &955504998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955504997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.19, y: 0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 648398358}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &959748090
 PrefabInstance:
   m_ObjectHideFlags: 0

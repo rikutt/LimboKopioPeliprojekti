@@ -15,11 +15,14 @@ namespace Barebones2D.Enemies
 {
     public class BossWolfBehave : MonoBehaviour
     {
+
         [SerializeField] private float moveSpeed = 5;
         [SerializeField] private float patrolMoveSpeed = 2.5f;
         [SerializeField] private float howlTriggerDistance;
         [SerializeField] private float howlTriggerTime;
         [SerializeField] private Transform[] patrolPosition;
+        [SerializeField] private Transform howlSpawnPoint;
+        [SerializeField] private GameObject howlParticle;
         bool stateHasStarted;
         private int patrolNumber = 0;
         private float howlTimer;
@@ -27,13 +30,13 @@ namespace Barebones2D.Enemies
         private Rigidbody2D wolfRigidbody;
         private WolfState currentState;
         private enum WolfState
+
         {
             Idle,
             Aggro,
             Howl,
             Patrol
         }
-
         private void TurnAroundCheck()
         {
             if (wolfRigidbody.velocity.x > 0)
@@ -91,7 +94,8 @@ namespace Barebones2D.Enemies
         {
             if (!stateHasStarted)
             {
-               
+                Instantiate(howlParticle, howlSpawnPoint); 
+                stateHasStarted = true;
             }
         }
 
@@ -143,6 +147,7 @@ namespace Barebones2D.Enemies
         void ChangeState(WolfState state)
         {
             currentState = state;
+            stateHasStarted = false;
 
         }
 
@@ -150,17 +155,18 @@ namespace Barebones2D.Enemies
         private void OnTriggerEnter2D(Collider2D collision)
 
         {
-            if (collision.CompareTag("Player"))
+            if (currentState != WolfState.Howl && collision.CompareTag("Player"))
             {
                 Player = collision.gameObject;
                 ChangeState(WolfState.Aggro);
+                
             }
         }
 
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player"))
+            if (currentState != WolfState.Howl && collision.CompareTag("Player"))
             {
                 ChangeState(WolfState.Patrol);
             }
